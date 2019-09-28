@@ -12,10 +12,12 @@
 		D6BB056B233FA3EF00FA8953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BB056A233FA3EF00FA8953 /* Assets.xcassets */; };
 		D6BB056E233FA3EF00FA8953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB056C233FA3EF00FA8953 /* LaunchScreen.storyboard */; };
 		D6BB0579233FA3F000FA8953 /* Demo_Babylon_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0578233FA3F000FA8953 /* Demo_Babylon_TestTests.swift */; };
-		D6BB0585233FA4DC00FA8953 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0584233FA4DC00FA8953 /* MainNavigationViewController.swift */; };
 		D6BB0587233FA51000FA8953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB0586233FA51000FA8953 /* Main.storyboard */; };
 		D6BB058A233FA57700FA8953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0588233FA57700FA8953 /* LoginViewController.swift */; };
-		D6BB058B233FA57700FA8953 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BB0589233FA57700FA8953 /* LoginViewController.xib */; };
+		D6BB058E233FD3A200FA8953 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB058D233FD3A200FA8953 /* LoginPresenter.swift */; };
+		D6BB0591233FE6B800FA8953 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB058F233FE6B800FA8953 /* RegisterViewController.swift */; };
+		D6BB0592233FE6B800FA8953 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BB0590233FE6B800FA8953 /* RegisterViewController.xib */; };
+		D6BB0595233FE81100FA8953 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0594233FE81100FA8953 /* RegisterPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +40,12 @@
 		D6BB0574233FA3F000FA8953 /* Demo-Babylon-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Demo-Babylon-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BB0578233FA3F000FA8953 /* Demo_Babylon_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_Babylon_TestTests.swift; sourceTree = "<group>"; };
 		D6BB057A233FA3F000FA8953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BB0584233FA4DC00FA8953 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		D6BB0586233FA51000FA8953 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D6BB0588233FA57700FA8953 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D6BB0589233FA57700FA8953 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D6BB058D233FD3A200FA8953 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		D6BB058F233FE6B800FA8953 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D6BB0590233FE6B800FA8953 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		D6BB0594233FE81100FA8953 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +89,8 @@
 			children = (
 				D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */,
 				D6BB0563233FA3EE00FA8953 /* SceneDelegate.swift */,
-				D6BB0584233FA4DC00FA8953 /* MainNavigationViewController.swift */,
-				D6BB0588233FA57700FA8953 /* LoginViewController.swift */,
-				D6BB0589233FA57700FA8953 /* LoginViewController.xib */,
-				D6BB0586233FA51000FA8953 /* Main.storyboard */,
+				D6BB0593233FE6BE00FA8953 /* Register Screen */,
+				D6BB058C233FD36C00FA8953 /* Main + Login */,
 				D6BB056A233FA3EF00FA8953 /* Assets.xcassets */,
 				D6BB056C233FA3EF00FA8953 /* LaunchScreen.storyboard */,
 				D6BB056F233FA3EF00FA8953 /* Info.plist */,
@@ -103,6 +105,26 @@
 				D6BB057A233FA3F000FA8953 /* Info.plist */,
 			);
 			path = "Demo-Babylon-TestTests";
+			sourceTree = "<group>";
+		};
+		D6BB058C233FD36C00FA8953 /* Main + Login */ = {
+			isa = PBXGroup;
+			children = (
+				D6BB0588233FA57700FA8953 /* LoginViewController.swift */,
+				D6BB0586233FA51000FA8953 /* Main.storyboard */,
+				D6BB058D233FD3A200FA8953 /* LoginPresenter.swift */,
+			);
+			path = "Main + Login";
+			sourceTree = "<group>";
+		};
+		D6BB0593233FE6BE00FA8953 /* Register Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D6BB058F233FE6B800FA8953 /* RegisterViewController.swift */,
+				D6BB0594233FE81100FA8953 /* RegisterPresenter.swift */,
+				D6BB0590233FE6B800FA8953 /* RegisterViewController.xib */,
+			);
+			path = "Register Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,10 +208,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6BB058B233FA57700FA8953 /* LoginViewController.xib in Resources */,
 				D6BB0587233FA51000FA8953 /* Main.storyboard in Resources */,
 				D6BB056E233FA3EF00FA8953 /* LaunchScreen.storyboard in Resources */,
 				D6BB056B233FA3EF00FA8953 /* Assets.xcassets in Resources */,
+				D6BB0592233FE6B800FA8953 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BB058E233FD3A200FA8953 /* LoginPresenter.swift in Sources */,
+				D6BB0595233FE81100FA8953 /* RegisterPresenter.swift in Sources */,
+				D6BB0591233FE6B800FA8953 /* RegisterViewController.swift in Sources */,
 				D6BB058A233FA57700FA8953 /* LoginViewController.swift in Sources */,
-				D6BB0585233FA4DC00FA8953 /* MainNavigationViewController.swift in Sources */,
 				D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */,
 				D6BB0564233FA3EE00FA8953 /* SceneDelegate.swift in Sources */,
 			);

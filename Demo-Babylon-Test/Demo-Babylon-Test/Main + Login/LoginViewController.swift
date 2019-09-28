@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginVewControllerProtocol {
+protocol LoginViewControllerProtocol: AnyObject {
     func setTitle(_ title: String)
     func setRegisterButtonTitle(_ title: String)
     func setForgottenButtonTitle(_ title: String)
@@ -18,7 +18,7 @@ protocol LoginVewControllerProtocol {
     func goToList()
     func goToRegister()
     func goToForgotten()
-    func failedView()
+    func failedView(title: String, message: String)
 }
 
 class LoginViewController: UIViewController {
@@ -31,61 +31,73 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var forgottenButton: UIButton!
     
+    private var presenter = LoginPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        presenter.attachView(view: self)
+        presenter.viewDidLoad()
     }
-
 
     @IBAction func registerClicked(_ sender: Any) {
-        
+        presenter.registerClicked()
     }
+    
     @IBAction func forgottenClicked(_ sender: Any) {
-        
+        presenter.forgottenClicked()
     }
+    
     @IBAction func loginClicked(_ sender: Any) {
-        
+        presenter.loginClicked()
     }
 }
 
-extension LoginViewController: LoginVewControllerProtocol {
-    func failedView() {
-        <#code#>
+extension LoginViewController: LoginViewControllerProtocol {
+    func failedView(title: String, message: String) {
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func goToList() {
-        <#code#>
+        //TODO: Modal
+//        navigationController?.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: true, completion: nil)
     }
     
     func goToRegister() {
-        <#code#>
+        let presenter = RegisterPresenter()
+        let viewController = RegisterViewController(presenter: presenter)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func goToForgotten() {
-        <#code#>
+        //TODO: push
+//        navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: true)
     }
     
     func setTitle(_ title: String) {
-        <#code#>
+        titleLabel.text = title
     }
     
     func setRegisterButtonTitle(_ title: String) {
-        <#code#>
+        registerButton.setTitle(title, for: .normal)
     }
     
     func setForgottenButtonTitle(_ title: String) {
-        <#code#>
+        forgottenButton.setTitle(title, for: .normal)
     }
     
     func setLoginButtonTitle(_ title: String) {
-        <#code#>
+        loginButton.setTitle(title, for: .normal)
     }
     
     func setUsernamePlaceHolder(_ placeHolder: String) {
-        <#code#>
+        usernameTextField.placeholder = placeHolder
     }
     
     func setPasswordPlaceHolder(_ placeHolder: String) {
-        <#code#>
+        passwordTextField.placeholder = placeHolder
     }
 }
