@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Demo-Babylon-Test' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Demo-Babylon-Test
+	pod 'Firebase'
+	pod 'RxSwift'
+	pod 'RxCocoa'
+  target 'Demo-Babylon-TestTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
