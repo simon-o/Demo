@@ -14,6 +14,8 @@
 		D6BB0579233FA3F000FA8953 /* Demo_Babylon_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0578233FA3F000FA8953 /* Demo_Babylon_TestTests.swift */; };
 		D6BB0585233FA4DC00FA8953 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0584233FA4DC00FA8953 /* MainNavigationViewController.swift */; };
 		D6BB0587233FA51000FA8953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB0586233FA51000FA8953 /* Main.storyboard */; };
+		D6BB058A233FA57700FA8953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0588233FA57700FA8953 /* LoginViewController.swift */; };
+		D6BB058B233FA57700FA8953 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BB0589233FA57700FA8953 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		D6BB057A233FA3F000FA8953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6BB0584233FA4DC00FA8953 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		D6BB0586233FA51000FA8953 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D6BB0588233FA57700FA8953 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6BB0589233FA57700FA8953 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */,
 				D6BB0563233FA3EE00FA8953 /* SceneDelegate.swift */,
 				D6BB0584233FA4DC00FA8953 /* MainNavigationViewController.swift */,
+				D6BB0588233FA57700FA8953 /* LoginViewController.swift */,
+				D6BB0589233FA57700FA8953 /* LoginViewController.xib */,
 				D6BB0586233FA51000FA8953 /* Main.storyboard */,
 				D6BB056A233FA3EF00FA8953 /* Assets.xcassets */,
 				D6BB056C233FA3EF00FA8953 /* LaunchScreen.storyboard */,
@@ -180,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BB058B233FA57700FA8953 /* LoginViewController.xib in Resources */,
 				D6BB0587233FA51000FA8953 /* Main.storyboard in Resources */,
 				D6BB056E233FA3EF00FA8953 /* LaunchScreen.storyboard in Resources */,
 				D6BB056B233FA3EF00FA8953 /* Assets.xcassets in Resources */,
@@ -200,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BB058A233FA57700FA8953 /* LoginViewController.swift in Sources */,
 				D6BB0585233FA4DC00FA8953 /* MainNavigationViewController.swift in Sources */,
 				D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */,
 				D6BB0564233FA3EE00FA8953 /* SceneDelegate.swift in Sources */,

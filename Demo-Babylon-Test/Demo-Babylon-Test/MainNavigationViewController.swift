@@ -13,6 +13,7 @@ class MainNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.setViewControllers([LoginViewController()], animated: true)
         
     }
 }
