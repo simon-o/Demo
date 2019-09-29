@@ -9,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Demo_Babylon_Test" customModuleProvider="target">
             <connections>
-                <outlet property="passwordTextfield" destination="hvi-aW-SoG" id="Bq5-5W-LLf"/>
-                <outlet property="registerButton" destination="epD-UY-sbF" id="RXS-MM-3zi"/>
-                <outlet property="usernameTextfield" destination="DpE-5Y-O4M" id="HRG-0p-CKH"/>
+                <outlet property="passwordTextfield" destination="Lxd-BF-CJu" id="vvk-Ea-4PH"/>
+                <outlet property="registerButton" destination="z55-tA-OrF" id="nGz-Qh-y8M"/>
+                <outlet property="usernameTextfield" destination="606-7h-7fc" id="bar-8l-Rgf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,34 +20,62 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpE-5Y-O4M">
-                    <rect key="frame" x="25" y="114" width="364" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvi-aW-SoG">
-                    <rect key="frame" x="25" y="163" width="364" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epD-UY-sbF">
-                    <rect key="frame" x="184" y="287" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
-                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0O-XO-jTL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXJ-G2-bEC">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="606-7h-7fc">
+                                    <rect key="frame" x="25" y="150" width="364" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lxd-BF-CJu">
+                                    <rect key="frame" x="25" y="199" width="364" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z55-tA-OrF">
+                                    <rect key="frame" x="184" y="816" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="606-7h-7fc" firstAttribute="top" secondItem="zXJ-G2-bEC" secondAttribute="top" constant="150" id="58H-Y3-2gp"/>
+                                <constraint firstAttribute="trailing" secondItem="Lxd-BF-CJu" secondAttribute="trailing" constant="25" id="AUO-Ko-Lyn"/>
+                                <constraint firstAttribute="bottom" secondItem="z55-tA-OrF" secondAttribute="bottom" constant="50" id="GBg-j5-Gts"/>
+                                <constraint firstItem="z55-tA-OrF" firstAttribute="centerX" secondItem="zXJ-G2-bEC" secondAttribute="centerX" id="WrD-yf-UuM"/>
+                                <constraint firstItem="z55-tA-OrF" firstAttribute="top" secondItem="Lxd-BF-CJu" secondAttribute="bottom" priority="999" constant="583" id="Xeh-Jh-uM6"/>
+                                <constraint firstItem="Lxd-BF-CJu" firstAttribute="top" secondItem="606-7h-7fc" secondAttribute="bottom" constant="15" id="bve-6B-0LJ"/>
+                                <constraint firstItem="Lxd-BF-CJu" firstAttribute="leading" secondItem="zXJ-G2-bEC" secondAttribute="leading" constant="25" id="cmQ-7z-3ec"/>
+                                <constraint firstAttribute="trailing" secondItem="606-7h-7fc" secondAttribute="trailing" constant="25" id="fSc-7Q-yWn"/>
+                                <constraint firstItem="606-7h-7fc" firstAttribute="leading" secondItem="zXJ-G2-bEC" secondAttribute="leading" constant="25" id="tQ3-Mx-OQX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="zXJ-G2-bEC" firstAttribute="leading" secondItem="GnZ-2u-8KD" secondAttribute="leading" id="2ZQ-yD-XrJ"/>
+                        <constraint firstItem="5rV-WR-pMP" firstAttribute="width" secondItem="zXJ-G2-bEC" secondAttribute="width" id="3Y4-xz-48a"/>
+                        <constraint firstItem="zXJ-G2-bEC" firstAttribute="top" secondItem="GnZ-2u-8KD" secondAttribute="top" id="Cuu-7S-XAp"/>
+                        <constraint firstItem="zXJ-G2-bEC" firstAttribute="bottom" secondItem="GnZ-2u-8KD" secondAttribute="bottom" id="QvP-dW-bpd"/>
+                        <constraint firstItem="5rV-WR-pMP" firstAttribute="height" secondItem="zXJ-G2-bEC" secondAttribute="height" id="STo-vt-lWH"/>
+                        <constraint firstItem="zXJ-G2-bEC" firstAttribute="trailing" secondItem="GnZ-2u-8KD" secondAttribute="trailing" id="xUT-0a-8iT"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="GnZ-2u-8KD"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="5rV-WR-pMP"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DpE-5Y-O4M" secondAttribute="trailing" constant="25" id="6bg-Ui-QEx"/>
-                <constraint firstItem="DpE-5Y-O4M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="865-0E-m2v"/>
-                <constraint firstItem="hvi-aW-SoG" firstAttribute="top" secondItem="DpE-5Y-O4M" secondAttribute="bottom" constant="15" id="J7M-bU-5hT"/>
-                <constraint firstItem="epD-UY-sbF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Maj-ev-1up"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hvi-aW-SoG" secondAttribute="trailing" constant="25" id="TKv-MC-356"/>
-                <constraint firstItem="epD-UY-sbF" firstAttribute="top" secondItem="hvi-aW-SoG" secondAttribute="bottom" constant="90" id="Ulh-K2-Lxi"/>
-                <constraint firstItem="hvi-aW-SoG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="rma-cp-QnL"/>
-                <constraint firstItem="DpE-5Y-O4M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="wEF-vX-Z29"/>
+                <constraint firstItem="l0O-XO-jTL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8ac-JB-ScJ"/>
+                <constraint firstAttribute="trailing" secondItem="l0O-XO-jTL" secondAttribute="trailing" id="OAq-m0-rM8"/>
+                <constraint firstItem="l0O-XO-jTL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xcz-Cd-5i7"/>
+                <constraint firstAttribute="bottom" secondItem="l0O-XO-jTL" secondAttribute="bottom" id="bgB-LE-DXR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="151"/>
+            <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
         </view>
     </objects>
 </document>
