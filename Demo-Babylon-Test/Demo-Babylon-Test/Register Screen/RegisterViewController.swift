@@ -8,8 +8,11 @@
 
 import UIKit
 
-protocol RegisterViewControllerProtocol {
-    
+protocol RegisterViewControllerProtocol: AnyObject {
+    func showAlert(title: String, message: String)
+    func setUsernameTextField(placeHolder: String)
+    func setPasswordTextField(placeHolder: String)
+    func setRegisterButtonTitle(_ title: String)
 }
 
 class RegisterViewController: UIViewController {
@@ -31,10 +34,29 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        presenter.attachView(self)
+        presenter.viewDidLoad()
     }
 }
 
 extension RegisterViewController: RegisterViewControllerProtocol {
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
+    func setUsernameTextField(placeHolder: String) {
+        usernameTextfield.placeholder = placeHolder
+    }
+    
+    func setPasswordTextField(placeHolder: String) {
+        passwordTextfield.placeholder = placeHolder
+    }
+    
+    func setRegisterButtonTitle(_ title: String) {
+        registerButton.setTitle(title, for: .normal)
+    }
 }

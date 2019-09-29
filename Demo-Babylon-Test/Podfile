@@ -7,6 +7,7 @@ target 'Demo-Babylon-Test' do
 
   # Pods for Demo-Babylon-Test
 	pod 'Firebase'
+	pod 'Firebase/Auth'
 	pod 'RxSwift'
 	pod 'RxCocoa'
   target 'Demo-Babylon-TestTests' do

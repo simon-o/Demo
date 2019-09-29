@@ -16,7 +16,7 @@ protocol LoginPresenterProtocol: AnyObject {
     func viewDidLoad()
 }
 
-class LoginPresenter {
+final class LoginPresenter {
     private weak var view: LoginViewControllerProtocol?
     //TODO: Need to be init with the model
     init() {
@@ -30,7 +30,7 @@ extension LoginPresenter: LoginPresenterProtocol {
         view?.setLoginButtonTitle("Login")
         view?.setForgottenButtonTitle("Forgotten password")
         view?.setRegisterButtonTitle("Register")
-        view?.setUsernamePlaceHolder("Enter username")
+        view?.setUsernamePlaceHolder("Enter Email")
         view?.setPasswordPlaceHolder("Enter Password")
     }
     

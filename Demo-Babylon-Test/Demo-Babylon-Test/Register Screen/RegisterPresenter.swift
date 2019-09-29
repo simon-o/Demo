@@ -8,18 +8,25 @@
 
 import Foundation
 
-protocol RegisterPresenterProtocol {
+protocol RegisterPresenterProtocol: AnyObject {
     func viewDidLoad()
+    func attachView(_ view: RegisterViewControllerProtocol)
 }
 
-class RegisterPresenter: NSObject {
-
+final class RegisterPresenter {
+    weak var view: RegisterViewControllerProtocol?
+    
+    
 }
 
 extension RegisterPresenter: RegisterPresenterProtocol {
-    func viewDidLoad() {
-        
+    func attachView(_ view: RegisterViewControllerProtocol) {
+        self.view = view
     }
     
-    
+    func viewDidLoad() {
+        view?.setRegisterButtonTitle("Create Account")
+        view?.setUsernameTextField(placeHolder: "Set Username")
+        view?.setPasswordTextField(placeHolder: "Set Password")
+    }
 }
