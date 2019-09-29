@@ -26,6 +26,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var usernameTextfield: UITextField!
     @IBOutlet private weak var passwordTextfield: UITextField!
     @IBOutlet private weak var registerButton: UIButton!
+    @IBOutlet weak var scrollview: UIScrollView!
     
     let presenter: RegisterPresenterProtocol
     
@@ -41,8 +42,28 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
         presenter.attachView(self)
         presenter.viewDidLoad()
+    }
+    
+    @objc func keyboardWillShow(notification:NSNotification){
+
+        let userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollview.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        scrollview.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification:NSNotification){
+
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollview.contentInset = contentInset
     }
     
     @IBAction func registerButtonClicked(_ sender: Any) {

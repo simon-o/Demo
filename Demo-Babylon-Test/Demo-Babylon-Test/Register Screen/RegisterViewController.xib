@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="passwordTextfield" destination="Lxd-BF-CJu" id="vvk-Ea-4PH"/>
                 <outlet property="registerButton" destination="z55-tA-OrF" id="nGz-Qh-y8M"/>
+                <outlet property="scrollview" destination="l0O-XO-jTL" id="80z-UH-q8h"/>
                 <outlet property="usernameTextfield" destination="606-7h-7fc" id="bar-8l-Rgf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,10 +24,10 @@
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X31-ES-E4d">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <items>
-                        <navigationItem title="Title" id="BMO-zP-HvQ"/>
+                        <navigationItem id="BMO-zP-HvQ"/>
                     </items>
                 </navigationBar>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0O-XO-jTL">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="l0O-XO-jTL">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXJ-G2-bEC">
