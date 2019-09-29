@@ -9,10 +9,16 @@
 import UIKit
 
 protocol RegisterViewControllerProtocol: AnyObject {
-    func showAlert(title: String, message: String)
     func setUsernameTextField(placeHolder: String)
     func setPasswordTextField(placeHolder: String)
     func setRegisterButtonTitle(_ title: String)
+    
+    func displayAlert(title: String, message: String)
+    
+    func getEmail() -> String?
+    func getPassword() -> String?
+    
+    func goBack()
 }
 
 class RegisterViewController: UIViewController {
@@ -38,10 +44,26 @@ class RegisterViewController: UIViewController {
         presenter.attachView(self)
         presenter.viewDidLoad()
     }
+    
+    @IBAction func registerButtonClicked(_ sender: Any) {
+        presenter.registerButtonClicked()
+    }
 }
 
 extension RegisterViewController: RegisterViewControllerProtocol {
-    func showAlert(title: String, message: String) {
+    func goBack() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func getEmail() -> String? {
+        return usernameTextfield.text
+    }
+    
+    func getPassword() -> String? {
+        return passwordTextfield.text
+    }
+    
+    func displayAlert(title: String, message: String) {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         

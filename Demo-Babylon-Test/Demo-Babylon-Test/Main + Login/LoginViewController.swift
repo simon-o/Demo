@@ -67,7 +67,7 @@ extension LoginViewController: LoginViewControllerProtocol {
     }
     
     func goToRegister() {
-        let presenter = RegisterPresenter()
+        let presenter = RegisterPresenter(firebase: FirebaseManagerAuth())
         let viewController = RegisterViewController(presenter: presenter)
         navigationController?.pushViewController(viewController, animated: true)
     }
