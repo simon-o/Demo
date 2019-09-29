@@ -11,6 +11,7 @@ import FirebaseAuth
 
 protocol FirebaseManagerAuthProtocol: AnyObject {
     func createUser(email: String, password: String, completionBlock: @escaping (Bool, String?) -> Void)
+    func signOut(completionBlock: @escaping (Bool, Error?) -> Void)
 }
 class FirebaseManagerAuth: FirebaseManagerAuthProtocol{
     func createUser(email: String, password: String, completionBlock: @escaping (Bool, String?) -> Void) {
@@ -20,6 +21,26 @@ class FirebaseManagerAuth: FirebaseManagerAuthProtocol{
             } else {
                 completionBlock(false, error?.localizedDescription)
             }
+        }
+    }
+    
+    func authentication(email: String, password: String, completionBlock: @escaping (Bool, String?) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error, let _ = AuthErrorCode(rawValue: error._code) {
+                completionBlock(false, error.localizedDescription)
+            } else {
+                completionBlock(true, nil)
+            }
+        }
+    }
+    
+    func signOut(completionBlock: @escaping (Bool, Error?) -> Void) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            completionBlock(true, nil)
+        } catch let signOutError {
+            completionBlock(false, signOutError)
         }
     }
 }

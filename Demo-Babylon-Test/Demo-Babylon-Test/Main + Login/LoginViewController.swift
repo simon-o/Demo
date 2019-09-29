@@ -19,6 +19,9 @@ protocol LoginViewControllerProtocol: AnyObject {
     func goToRegister()
     func goToForgotten()
     func failedView(title: String, message: String)
+    
+    func getEmail() -> String?
+    func getPassword() -> String?
 }
 
 class LoginViewController: UIViewController {
@@ -31,7 +34,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var registerButton: UIButton!
     @IBOutlet private weak var forgottenButton: UIButton!
     
-    private var presenter = LoginPresenter()
+    private var presenter = LoginPresenter(fireBase: FirebaseManagerAuth())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +57,14 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewControllerProtocol {
+    func getEmail() -> String? {
+        return usernameTextField.text
+    }
+    
+    func getPassword() -> String? {
+        return passwordTextField.text
+    }
+    
     func failedView(title: String, message: String) {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))

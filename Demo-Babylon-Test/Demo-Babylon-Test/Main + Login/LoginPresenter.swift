@@ -18,9 +18,10 @@ protocol LoginPresenterProtocol: AnyObject {
 
 final class LoginPresenter {
     private weak var view: LoginViewControllerProtocol?
-    //TODO: Need to be init with the model
-    init() {
-        
+    private var firebaseManager: FirebaseManagerAuth
+    
+    init(fireBase: FirebaseManagerAuth) {
+        self.firebaseManager = fireBase
     }
 }
 
@@ -39,7 +40,13 @@ extension LoginPresenter: LoginPresenterProtocol {
     }
     
     func loginClicked() {
-        view?.failedView(title: "LOL", message: "toto")
+        firebaseManager.authentication(email: view?.getEmail() ?? "", password: view?.getPassword() ?? "") { [weak self] (isSuccess, error) in
+            if isSuccess {
+                self?.view?.goToList()
+            } else {
+                self?.view?.failedView(title: "Error", message: error ?? "An error happened")
+            }
+        }
     }
     
     func registerClicked() {
@@ -49,6 +56,4 @@ extension LoginPresenter: LoginPresenterProtocol {
     func forgottenClicked() {
         view?.goToForgotten()
     }
-    
-    
 }

@@ -42,7 +42,7 @@ extension RegisterPresenter: RegisterPresenterProtocol {
     
     func viewDidLoad() {
         view?.setRegisterButtonTitle("Create Account")
-        view?.setUsernameTextField(placeHolder: "Set Username")
+        view?.setUsernameTextField(placeHolder: "Set Email")
         view?.setPasswordTextField(placeHolder: "Set Password")
         
         
