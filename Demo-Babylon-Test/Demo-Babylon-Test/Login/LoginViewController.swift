@@ -98,6 +98,7 @@ extension LoginViewController: LoginViewControllerProtocol {
     func goToList() {
         let presenter = ListPresenter(fireBase: FirebaseManagerAuth())
         let viewController = ListTableViewController(presenter: presenter)
+        viewController.modalPresentationStyle = .fullScreen
         navigationController?.present(viewController, animated: true, completion: nil)
     }
     
