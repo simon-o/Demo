@@ -96,8 +96,9 @@ extension LoginViewController: LoginViewControllerProtocol {
     }
     
     func goToList() {
-        //TODO: Modal
-//        navigationController?.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: true, completion: nil)
+        let presenter = ListPresenter(fireBase: FirebaseManagerAuth())
+        let viewController = ListTableViewController(presenter: presenter)
+        navigationController?.present(viewController, animated: true, completion: nil)
     }
     
     func goToRegister() {
