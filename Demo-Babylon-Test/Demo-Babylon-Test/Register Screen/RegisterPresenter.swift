@@ -14,8 +14,8 @@ protocol RegisterPresenterProtocol: AnyObject {
     func registerButtonClicked()
 }
 
-class RegisterPresenter {
-    weak var view: RegisterViewControllerProtocol?
+final class RegisterPresenter {
+    private weak var view: RegisterViewControllerProtocol?
     private var firebaseManager: FirebaseManagerAuth
     
     init(firebase: FirebaseManagerAuth) {

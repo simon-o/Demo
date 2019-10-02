@@ -21,14 +21,14 @@ protocol RegisterViewControllerProtocol: AnyObject {
     func goBack()
 }
 
-class RegisterViewController: UIViewController {
+final class RegisterViewController: UIViewController {
 
     @IBOutlet private weak var usernameTextfield: UITextField!
     @IBOutlet private weak var passwordTextfield: UITextField!
     @IBOutlet private weak var registerButton: UIButton!
-    @IBOutlet weak var scrollview: UIScrollView!
+    @IBOutlet private weak var scrollview: UIScrollView!
     
-    let presenter: RegisterPresenterProtocol
+    private let presenter: RegisterPresenterProtocol
     
     init(presenter: RegisterPresenterProtocol) {
         self.presenter = presenter

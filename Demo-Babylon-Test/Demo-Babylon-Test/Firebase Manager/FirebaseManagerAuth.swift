@@ -12,8 +12,10 @@ import FirebaseAuth
 protocol FirebaseManagerAuthProtocol: AnyObject {
     func createUser(email: String, password: String, completionBlock: @escaping (Bool, String?) -> Void)
     func signOut(completionBlock: @escaping (Bool, Error?) -> Void)
+    func forgottenPassword(email: String, completionBlock: @escaping (Error?) -> Void)
 }
-class FirebaseManagerAuth: FirebaseManagerAuthProtocol{
+
+final class FirebaseManagerAuth: FirebaseManagerAuthProtocol{
     func createUser(email: String, password: String, completionBlock: @escaping (Bool, String?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
             if let _ = authResult?.user {
@@ -41,6 +43,12 @@ class FirebaseManagerAuth: FirebaseManagerAuthProtocol{
             completionBlock(true, nil)
         } catch let signOutError {
             completionBlock(false, signOutError)
+        }
+    }
+    
+    func forgottenPassword(email: String, completionBlock: @escaping (Error?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            completionBlock(error)
         }
     }
 }

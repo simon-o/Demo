@@ -84,8 +84,9 @@ extension LoginViewController: LoginViewControllerProtocol {
     }
     
     func goToForgotten() {
-        //TODO: push
-//        navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: true)
+        let presenter = ForgottenPasswordPresenter(firebase: FirebaseManagerAuth())
+        let viewController = ForgottenPasswordViewController(presenter: presenter)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func setTitle(_ title: String) {
