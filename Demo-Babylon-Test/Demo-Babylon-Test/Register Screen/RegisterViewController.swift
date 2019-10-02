@@ -8,12 +8,10 @@
 
 import UIKit
 
-protocol RegisterViewControllerProtocol: AnyObject {
+protocol RegisterViewControllerProtocol: BaseViewControllerProtocol {
     func setUsernameTextField(placeHolder: String)
     func setPasswordTextField(placeHolder: String)
     func setRegisterButtonTitle(_ title: String)
-    
-    func displayAlert(title: String, message: String)
     
     func getEmail() -> String?
     func getPassword() -> String?
@@ -82,13 +80,6 @@ extension RegisterViewController: RegisterViewControllerProtocol {
     
     func getPassword() -> String? {
         return passwordTextfield.text
-    }
-    
-    func displayAlert(title: String, message: String) {
-        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
     func setUsernameTextField(placeHolder: String) {

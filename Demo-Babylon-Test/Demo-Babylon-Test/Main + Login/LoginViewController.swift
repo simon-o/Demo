@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginViewControllerProtocol: AnyObject {
+protocol LoginViewControllerProtocol: BaseViewControllerProtocol {
     func setTitle(_ title: String)
     func setRegisterButtonTitle(_ title: String)
     func setForgottenButtonTitle(_ title: String)
@@ -18,7 +18,6 @@ protocol LoginViewControllerProtocol: AnyObject {
     func goToList()
     func goToRegister()
     func goToForgotten()
-    func failedView(title: String, message: String)
     
     func getEmail() -> String?
     func getPassword() -> String?
@@ -63,13 +62,6 @@ extension LoginViewController: LoginViewControllerProtocol {
     
     func getPassword() -> String? {
         return passwordTextField.text
-    }
-    
-    func failedView(title: String, message: String) {
-        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
     func goToList() {

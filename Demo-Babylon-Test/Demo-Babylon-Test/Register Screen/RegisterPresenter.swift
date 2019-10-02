@@ -27,10 +27,11 @@ extension RegisterPresenter: RegisterPresenterProtocol {
     func registerButtonClicked() {
         if let email = self.view?.getEmail(), let password = self.view?.getPassword() {
             FirebaseManagerAuth().createUser(email: email, password: password) { [weak self] (isSuccess, error) in
+                guard let self = self else { return }
                 if isSuccess {
-                    self?.view?.goBack()
+                    self.view?.goBack()
                 } else {
-                    self?.view?.displayAlert(title: "Error", message: error ?? "An error happened")
+                    self.view?.alertView(title: "Error", message: error ?? "An error happened", buttonTitle: "Ok")
                 }
             }
         }

@@ -8,9 +8,8 @@
 
 import UIKit
  
- protocol ForgottenPasswordViewControllerProtocol: AnyObject {
+ protocol ForgottenPasswordViewControllerProtocol: BaseViewControllerProtocol {
     func goBack()
-    func displayAlert(title: String, message: String)
     
     func setEmailPlaceHolder(_ placeHolder: String)
     func setButtonTitle(_ title: String)
@@ -50,13 +49,6 @@ final class ForgottenPasswordViewController: UIViewController {
  extension ForgottenPasswordViewController: ForgottenPasswordViewControllerProtocol {
     func getEmailTextField() -> String? {
         return emailTextField.text
-    }
-    
-    func displayAlert(title: String, message: String) {
-        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
     func goBack() {

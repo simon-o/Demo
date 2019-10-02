@@ -41,10 +41,11 @@ extension LoginPresenter: LoginPresenterProtocol {
     
     func loginClicked() {
         firebaseManager.authentication(email: view?.getEmail() ?? "", password: view?.getPassword() ?? "") { [weak self] (isSuccess, error) in
+            guard let self = self else { return }
             if isSuccess {
-                self?.view?.goToList()
+                self.view?.goToList()
             } else {
-                self?.view?.failedView(title: "Error", message: error ?? "An error happened")
+                self.view?.alertView(title: "Error", message: error ?? "An error happened", buttonTitle: "Ok")
             }
         }
     }

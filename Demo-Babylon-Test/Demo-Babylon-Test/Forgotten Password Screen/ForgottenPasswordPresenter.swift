@@ -34,12 +34,13 @@ extension ForgottenPasswordPresenter: ForgottenPasswordPresenterProtocol {
     }
     
     func sendButtonClicked() {
-        firebaseManager.forgottenPassword(email: view?.getEmailTextField() ?? "") { (error) in
+        firebaseManager.forgottenPassword(email: view?.getEmailTextField() ?? "") { [weak self] (error) in
+            guard let self = self else { return }
             guard let error = error else {
                 self.view?.goBack()
                 return
             }
-            self.view?.displayAlert(title: "Error", message: error.localizedDescription)
+            self.view?.alertView(title: "Error", message: error.localizedDescription, buttonTitle: "Ok")
         }
     }
 }
