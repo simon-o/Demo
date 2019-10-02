@@ -33,7 +33,16 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var registerButton: UIButton!
     @IBOutlet private weak var forgottenButton: UIButton!
     
-    private var presenter = LoginPresenter(fireBase: FirebaseManagerAuth())
+    private var presenter: LoginPresenterProtocol
+    
+    init(presenter: LoginPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: String(describing: LoginViewController.self), bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
