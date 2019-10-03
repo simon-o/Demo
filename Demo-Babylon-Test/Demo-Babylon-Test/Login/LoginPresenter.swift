@@ -18,9 +18,9 @@ protocol LoginPresenterProtocol: AnyObject {
 
 final class LoginPresenter {
     private weak var view: LoginViewControllerProtocol?
-    private var firebaseManager: FirebaseManagerAuth
+    private var firebaseManager: FirebaseManagerAuthProtocol
     
-    init(fireBase: FirebaseManagerAuth) {
+    init(fireBase: FirebaseManagerAuthProtocol) {
         self.firebaseManager = fireBase
     }
 }

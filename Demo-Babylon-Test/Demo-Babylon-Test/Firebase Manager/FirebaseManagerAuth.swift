@@ -13,6 +13,7 @@ protocol FirebaseManagerAuthProtocol: AnyObject {
     func createUser(email: String, password: String, completionBlock: @escaping (Bool, String?) -> Void)
     func signOut(completionBlock: @escaping (Bool, Error?) -> Void)
     func forgottenPassword(email: String, completionBlock: @escaping (Error?) -> Void)
+    func authentication(email: String, password: String, completionBlock: @escaping (Bool, String?) -> Void)
 }
 
 final class FirebaseManagerAuth: FirebaseManagerAuthProtocol{
