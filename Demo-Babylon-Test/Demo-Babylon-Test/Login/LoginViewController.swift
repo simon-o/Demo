@@ -96,10 +96,11 @@ extension LoginViewController: LoginViewControllerProtocol {
     }
     
     func goToList() {
-        let presenter = ListPresenter(fireBase: FirebaseManagerAuth())
+        let presenter = ListPresenter(fireBase: FirebaseManager())
         let viewController = ListTableViewController(presenter: presenter)
-        viewController.modalPresentationStyle = .fullScreen
-        navigationController?.present(viewController, animated: true, completion: nil)
+        let navigator = UINavigationController.init(rootViewController: viewController)
+        navigator.modalPresentationStyle = .fullScreen
+        navigationController?.present(navigator, animated: true, completion: nil)
     }
     
     func goToRegister() {

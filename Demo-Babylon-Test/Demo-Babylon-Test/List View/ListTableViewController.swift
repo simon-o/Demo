@@ -10,6 +10,10 @@ import UIKit
 
 protocol ListTableViewControllerProtocol: AnyObject {
     func reload()
+    func setNavigationTitle(_ title: String)
+    func setNavigationItem()
+    
+    func goToAddView()
 }
 
 final class ListTableViewController: UITableViewController {
@@ -27,6 +31,8 @@ final class ListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        presenter.attachView(view: self)
+        presenter.viewDidLoad()
      
     }
 
@@ -41,10 +47,32 @@ final class ListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    
+    @objc func addClicked() {
+        presenter.addClicked()
+    }
 }
 
 extension ListTableViewController: ListTableViewControllerProtocol {
+    func goToAddView() {
+        let presenter = AddItemPresenter(fireBase: FirebaseManager())
+        let viewController = AddItemViewController(presenter: presenter)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func setNavigationTitle(_ title: String) {
+        navigationItem.title = title
+    }
+    
+    func setNavigationItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addClicked))
+    }
+    
+    func setNavigationItemCouner() {
+        //TODO: Need to be done with RXSwift to learn
+    }
+    
     func reload() {
-        // MARK: - reload tableView
+        tableView.reloadData()
     }
 }

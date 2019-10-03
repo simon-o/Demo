@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BD2345F0850023D8DB /* FireBaseManager.swift */; };
+		2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */; };
+		2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */; };
+		2D3070C52345FA800023D8DB /* AddItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070C42345FA800023D8DB /* AddItemPresenter.swift */; };
 		2D81071D2344F1DA00768D23 /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D81071B2344F1D900768D23 /* ForgottenPasswordViewController.swift */; };
 		2D81071E2344F1DA00768D23 /* ForgottenPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D81071C2344F1DA00768D23 /* ForgottenPasswordViewController.xib */; };
 		2D8107212344F5A900768D23 /* ForgottenPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8107202344F5A900768D23 /* ForgottenPasswordPresenter.swift */; };
@@ -43,6 +47,10 @@
 
 /* Begin PBXFileReference section */
 		03325BD627BE7E6AC404A502 /* Pods-Demo-Babylon-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-Babylon-Test.debug.xcconfig"; path = "Target Support Files/Pods-Demo-Babylon-Test/Pods-Demo-Babylon-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		2D3070BD2345F0850023D8DB /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
+		2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
+		2D3070C42345FA800023D8DB /* AddItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemPresenter.swift; sourceTree = "<group>"; };
 		2D81071B2344F1D900768D23 /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
 		2D81071C2344F1DA00768D23 /* ForgottenPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgottenPasswordViewController.xib; sourceTree = "<group>"; };
 		2D8107202344F5A900768D23 /* ForgottenPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordPresenter.swift; sourceTree = "<group>"; };
@@ -94,6 +102,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3070C32345FA620023D8DB /* Add Item View */ = {
+			isa = PBXGroup;
+			children = (
+				2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */,
+				2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */,
+				2D3070C42345FA800023D8DB /* AddItemPresenter.swift */,
+			);
+			path = "Add Item View";
+			sourceTree = "<group>";
+		};
 		2D81071F2344F4DF00768D23 /* Forgotten Password Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				D67E8F3C2340E44400C11C35 /* FirebaseManagerAuth.swift */,
+				2D3070BD2345F0850023D8DB /* FireBaseManager.swift */,
 			);
 			path = "Firebase Manager";
 			sourceTree = "<group>";
@@ -166,6 +185,7 @@
 			children = (
 				D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */,
 				D6BB0563233FA3EE00FA8953 /* SceneDelegate.swift */,
+				2D3070C32345FA620023D8DB /* Add Item View */,
 				D69B21DB234541D0006C2030 /* List View */,
 				D69B21D2234530A7006C2030 /* Base VC */,
 				2D8107222345006400768D23 /* Firebase Manager */,
@@ -303,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69B21D4234530E1006C2030 /* LoginViewController.xib in Resources */,
+				2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */,
 				2D81071E2344F1DA00768D23 /* ForgottenPasswordViewController.xib in Resources */,
 				D6BB056E233FA3EF00FA8953 /* LaunchScreen.storyboard in Resources */,
 				D67E8F382340D83200C11C35 /* GoogleService-Info.plist in Resources */,
@@ -400,6 +421,9 @@
 				D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */,
 				D69B21D9234541CD006C2030 /* ListTableViewController.swift in Sources */,
 				D6BB0564233FA3EE00FA8953 /* SceneDelegate.swift in Sources */,
+				2D3070C52345FA800023D8DB /* AddItemPresenter.swift in Sources */,
+				2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */,
+				2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */,
 				D69B21DD23454630006C2030 /* ListPresenter.swift in Sources */,
 				2D8107212344F5A900768D23 /* ForgottenPasswordPresenter.swift in Sources */,
 			);
