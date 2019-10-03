@@ -17,6 +17,7 @@
 		2D810724234501F200768D23 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D810723234501F200768D23 /* BaseViewController.swift */; };
 		2D9E5EC123462A10003B4E5C /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E5EC023462A10003B4E5C /* LoginPresenterTest.swift */; };
 		2D9E5EC32346498F003B4E5C /* FireBaseManagerAuthMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E5EC22346498F003B4E5C /* FireBaseManagerAuthMock.swift */; };
+		2D9E5EC523469A60003B4E5C /* RegisterPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E5EC423469A60003B4E5C /* RegisterPresenterTest.swift */; };
 		3820940025ADDF3AD7355B2C /* Pods_Demo_Babylon_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D26C5A2AAFD1A870BAAAED /* Pods_Demo_Babylon_TestTests.framework */; };
 		851286B7303B1164153E709E /* Pods_Demo_Babylon_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF1E83D127AB746A24F7149 /* Pods_Demo_Babylon_Test.framework */; };
 		D67E8F382340D83200C11C35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D67E8F372340D83200C11C35 /* GoogleService-Info.plist */; };
@@ -59,6 +60,7 @@
 		2D810723234501F200768D23 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2D9E5EC023462A10003B4E5C /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		2D9E5EC22346498F003B4E5C /* FireBaseManagerAuthMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManagerAuthMock.swift; sourceTree = "<group>"; };
+		2D9E5EC423469A60003B4E5C /* RegisterPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterTest.swift; sourceTree = "<group>"; };
 		AEF1E83D127AB746A24F7149 /* Pods_Demo_Babylon_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_Babylon_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D26C5A2AAFD1A870BAAAED /* Pods_Demo_Babylon_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_Babylon_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B748F096E125A6E48317523D /* Pods-Demo-Babylon-TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-Babylon-TestTests.debug.xcconfig"; path = "Target Support Files/Pods-Demo-Babylon-TestTests/Pods-Demo-Babylon-TestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				D6BB058F233FE6B800FA8953 /* RegisterViewController.swift */,
 				D6BB0594233FE81100FA8953 /* RegisterPresenter.swift */,
 				D6BB0590233FE6B800FA8953 /* RegisterViewController.xib */,
+				2D9E5EC423469A60003B4E5C /* RegisterPresenterTest.swift */,
 			);
 			path = "Register Screen";
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				2D9E5EC123462A10003B4E5C /* LoginPresenterTest.swift in Sources */,
 				2D9E5EC32346498F003B4E5C /* FireBaseManagerAuthMock.swift in Sources */,
 				D6BB0579233FA3F000FA8953 /* Demo_Babylon_TestTests.swift in Sources */,
+				2D9E5EC523469A60003B4E5C /* RegisterPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

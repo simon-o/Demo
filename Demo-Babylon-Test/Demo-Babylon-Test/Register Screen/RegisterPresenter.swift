@@ -16,9 +16,9 @@ protocol RegisterPresenterProtocol: AnyObject {
 
 final class RegisterPresenter {
     private weak var view: RegisterViewControllerProtocol?
-    private var firebaseManager: FirebaseManagerAuth
+    private var firebaseManager: FirebaseManagerAuthProtocol
     
-    init(firebase: FirebaseManagerAuth) {
+    init(firebase: FirebaseManagerAuthProtocol) {
         self.firebaseManager = firebase
     }
 }
@@ -26,7 +26,7 @@ final class RegisterPresenter {
 extension RegisterPresenter: RegisterPresenterProtocol {
     func registerButtonClicked() {
         if let email = self.view?.getEmail(), let password = self.view?.getPassword() {
-            FirebaseManagerAuth().createUser(email: email, password: password) { [weak self] (isSuccess, error) in
+            firebaseManager.createUser(email: email, password: password) { [weak self] (isSuccess, error) in
                 guard let self = self else { return }
                 if isSuccess {
                     self.view?.goBack()
