@@ -15,6 +15,7 @@
 		2D81071E2344F1DA00768D23 /* ForgottenPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D81071C2344F1DA00768D23 /* ForgottenPasswordViewController.xib */; };
 		2D8107212344F5A900768D23 /* ForgottenPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8107202344F5A900768D23 /* ForgottenPasswordPresenter.swift */; };
 		2D810724234501F200768D23 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D810723234501F200768D23 /* BaseViewController.swift */; };
+		2D9E5EC123462A10003B4E5C /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E5EC023462A10003B4E5C /* LoginPresenterTest.swift */; };
 		3820940025ADDF3AD7355B2C /* Pods_Demo_Babylon_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D26C5A2AAFD1A870BAAAED /* Pods_Demo_Babylon_TestTests.framework */; };
 		851286B7303B1164153E709E /* Pods_Demo_Babylon_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF1E83D127AB746A24F7149 /* Pods_Demo_Babylon_Test.framework */; };
 		D67E8F382340D83200C11C35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D67E8F372340D83200C11C35 /* GoogleService-Info.plist */; };
@@ -55,6 +56,7 @@
 		2D81071C2344F1DA00768D23 /* ForgottenPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgottenPasswordViewController.xib; sourceTree = "<group>"; };
 		2D8107202344F5A900768D23 /* ForgottenPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordPresenter.swift; sourceTree = "<group>"; };
 		2D810723234501F200768D23 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2D9E5EC023462A10003B4E5C /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		AEF1E83D127AB746A24F7149 /* Pods_Demo_Babylon_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_Babylon_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D26C5A2AAFD1A870BAAAED /* Pods_Demo_Babylon_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_Babylon_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B748F096E125A6E48317523D /* Pods-Demo-Babylon-TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-Babylon-TestTests.debug.xcconfig"; path = "Target Support Files/Pods-Demo-Babylon-TestTests/Pods-Demo-Babylon-TestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				D69B21D3234530E1006C2030 /* LoginViewController.xib */,
 				D6BB0588233FA57700FA8953 /* LoginViewController.swift */,
 				D6BB058D233FD3A200FA8953 /* LoginPresenter.swift */,
+				2D9E5EC023462A10003B4E5C /* LoginPresenterTest.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9E5EC123462A10003B4E5C /* LoginPresenterTest.swift in Sources */,
 				D6BB0579233FA3F000FA8953 /* Demo_Babylon_TestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

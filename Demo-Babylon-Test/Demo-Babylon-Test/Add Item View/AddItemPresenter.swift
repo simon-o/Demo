@@ -11,6 +11,7 @@ import Foundation
 protocol AddItemPresenterProtocol: AnyObject {
     func attachView(_ view: AddItemViewControllerProtocol)
     func viewDidLoad()
+    func saveClicked()
 }
 
 class AddItemPresenter: NSObject {
@@ -28,6 +29,12 @@ extension AddItemPresenter: AddItemPresenterProtocol {
     }
     
     func viewDidLoad() {
-        
+        view?.setNavigationItem()
+        view?.setNameTextfieldPlaceholder(text: "Name Item")
+        view?.setQuantityTextfieldPlaceholder(text: "Quantity")
+    }
+    
+    func saveClicked() {
+        //TODO: Save on firebase
     }
 }

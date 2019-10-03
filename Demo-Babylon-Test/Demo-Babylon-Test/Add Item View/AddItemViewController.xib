@@ -1,22 +1,80 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddItemViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddItemViewController" customModule="Demo_Babylon_Test" customModuleProvider="target">
             <connections>
+                <outlet property="itemNameTextField" destination="gwH-hl-Usb" id="np2-Qu-E85"/>
+                <outlet property="quantityTextField" destination="Tny-N9-8WW" id="Uh1-th-Xhf"/>
+                <outlet property="scrollView" destination="mD6-Lv-Mzm" id="IIn-e5-EQw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2P-I8-mEO">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                </navigationBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="mD6-Lv-Mzm">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4J-l2-sDe">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwH-hl-Usb">
+                                    <rect key="frame" x="25" y="150" width="364" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tny-N9-8WW">
+                                    <rect key="frame" x="25" y="194" width="364" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="gwH-hl-Usb" secondAttribute="trailing" constant="25" id="3Lb-PP-R3q"/>
+                                <constraint firstItem="Tny-N9-8WW" firstAttribute="top" secondItem="gwH-hl-Usb" secondAttribute="bottom" constant="10" id="8Kj-pb-ezP"/>
+                                <constraint firstItem="Tny-N9-8WW" firstAttribute="leading" secondItem="S4J-l2-sDe" secondAttribute="leading" constant="25" id="EBG-qH-fqV"/>
+                                <constraint firstAttribute="trailing" secondItem="Tny-N9-8WW" secondAttribute="trailing" constant="25" id="KfN-G5-O3T"/>
+                                <constraint firstItem="gwH-hl-Usb" firstAttribute="leading" secondItem="S4J-l2-sDe" secondAttribute="leading" constant="25" id="clh-3D-0yf"/>
+                                <constraint firstItem="gwH-hl-Usb" firstAttribute="top" secondItem="S4J-l2-sDe" secondAttribute="top" constant="150" id="p8k-qi-rsz"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="S4J-l2-sDe" firstAttribute="trailing" secondItem="RGc-tw-qHr" secondAttribute="trailing" id="AJt-fS-wEY"/>
+                        <constraint firstItem="Hlo-O7-Dzt" firstAttribute="width" secondItem="S4J-l2-sDe" secondAttribute="width" id="L8w-Gu-E9D"/>
+                        <constraint firstItem="S4J-l2-sDe" firstAttribute="top" secondItem="RGc-tw-qHr" secondAttribute="top" id="SM7-D0-vWd"/>
+                        <constraint firstItem="S4J-l2-sDe" firstAttribute="bottom" secondItem="RGc-tw-qHr" secondAttribute="bottom" id="ddb-sP-uQs"/>
+                        <constraint firstItem="Hlo-O7-Dzt" firstAttribute="height" secondItem="S4J-l2-sDe" secondAttribute="height" id="m3D-lY-uh8"/>
+                        <constraint firstItem="S4J-l2-sDe" firstAttribute="leading" secondItem="RGc-tw-qHr" secondAttribute="leading" id="sbi-S9-z1e"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="RGc-tw-qHr"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Hlo-O7-Dzt"/>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d2P-I8-mEO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QMB-Ue-HuV"/>
+                <constraint firstItem="mD6-Lv-Mzm" firstAttribute="top" secondItem="d2P-I8-mEO" secondAttribute="bottom" id="SgS-oe-peY"/>
+                <constraint firstAttribute="bottom" secondItem="mD6-Lv-Mzm" secondAttribute="bottom" id="cn3-9i-Q4T"/>
+                <constraint firstItem="mD6-Lv-Mzm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pUE-N7-rwT"/>
+                <constraint firstAttribute="trailing" secondItem="mD6-Lv-Mzm" secondAttribute="trailing" id="pj2-yi-H0t"/>
+                <constraint firstAttribute="trailing" secondItem="d2P-I8-mEO" secondAttribute="trailing" id="sCF-Sk-oMf"/>
+                <constraint firstItem="d2P-I8-mEO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wNQ-Wg-UCr"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
         </view>
     </objects>
 </document>
