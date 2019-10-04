@@ -16,9 +16,9 @@ protocol ForgottenPasswordPresenterProtocol: AnyObject {
 
 final class ForgottenPasswordPresenter {
     private weak var view: ForgottenPasswordViewControllerProtocol?
-    private var firebaseManager: FirebaseManagerAuth
+    private var firebaseManager: FirebaseManagerAuthProtocol
     
-    init(firebase: FirebaseManagerAuth) {
+    init(firebase: FirebaseManagerAuthProtocol) {
         self.firebaseManager = firebase
     }
 }
