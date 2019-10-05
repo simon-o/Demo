@@ -28,7 +28,6 @@
 		D69B21D4234530E1006C2030 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69B21D3234530E1006C2030 /* LoginViewController.xib */; };
 		D69B21D9234541CD006C2030 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B21D7234541CD006C2030 /* ListTableViewController.swift */; };
 		D69B21DA234541CD006C2030 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69B21D8234541CD006C2030 /* ListTableViewController.xib */; };
-		D69B21DD23454630006C2030 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B21DC23454630006C2030 /* ListPresenter.swift */; };
 		D69B21DF23479E12006C2030 /* ForgottenPasswordPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B21DE23479E12006C2030 /* ForgottenPasswordPresenterTest.swift */; };
 		D69B21E12347B05A006C2030 /* AddItemPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B21E02347B05A006C2030 /* AddItemPresenterTest.swift */; };
 		D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */; };
@@ -77,7 +76,6 @@
 		D69B21D3234530E1006C2030 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D69B21D7234541CD006C2030 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		D69B21D8234541CD006C2030 /* ListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
-		D69B21DC23454630006C2030 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		D69B21DE23479E12006C2030 /* ForgottenPasswordPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordPresenterTest.swift; sourceTree = "<group>"; };
 		D69B21E02347B05A006C2030 /* AddItemPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemPresenterTest.swift; sourceTree = "<group>"; };
 		D6BB055E233FA3EE00FA8953 /* Demo-Babylon-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-Babylon-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +182,6 @@
 			children = (
 				D69B21D7234541CD006C2030 /* ListTableViewController.swift */,
 				D69B21D8234541CD006C2030 /* ListTableViewController.xib */,
-				D69B21DC23454630006C2030 /* ListPresenter.swift */,
 				2D02CAFA2348CBBF0078BE24 /* Cell */,
 			);
 			path = "List View";
@@ -459,7 +456,6 @@
 				2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */,
 				2D02CAFC2348D3090078BE24 /* ListCellPresenter.swift in Sources */,
 				2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */,
-				D69B21DD23454630006C2030 /* ListPresenter.swift in Sources */,
 				2D8107212344F5A900768D23 /* ForgottenPasswordPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
