@@ -29,6 +29,8 @@
 		D69B21D9234541CD006C2030 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B21D7234541CD006C2030 /* ListTableViewController.swift */; };
 		D69B21DA234541CD006C2030 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69B21D8234541CD006C2030 /* ListTableViewController.xib */; };
 		D69B21DD23454630006C2030 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B21DC23454630006C2030 /* ListPresenter.swift */; };
+		D69B21DF23479E12006C2030 /* ForgottenPasswordPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B21DE23479E12006C2030 /* ForgottenPasswordPresenterTest.swift */; };
+		D69B21E12347B05A006C2030 /* AddItemPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B21E02347B05A006C2030 /* AddItemPresenterTest.swift */; };
 		D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */; };
 		D6BB0564233FA3EE00FA8953 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB0563233FA3EE00FA8953 /* SceneDelegate.swift */; };
 		D6BB056B233FA3EF00FA8953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BB056A233FA3EF00FA8953 /* Assets.xcassets */; };
@@ -76,6 +78,8 @@
 		D69B21D7234541CD006C2030 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		D69B21D8234541CD006C2030 /* ListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
 		D69B21DC23454630006C2030 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		D69B21DE23479E12006C2030 /* ForgottenPasswordPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordPresenterTest.swift; sourceTree = "<group>"; };
+		D69B21E02347B05A006C2030 /* AddItemPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemPresenterTest.swift; sourceTree = "<group>"; };
 		D6BB055E233FA3EE00FA8953 /* Demo-Babylon-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-Babylon-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6BB0563233FA3EE00FA8953 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */,
 				2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */,
 				2D3070C42345FA800023D8DB /* AddItemPresenter.swift */,
+				D69B21E02347B05A006C2030 /* AddItemPresenterTest.swift */,
 			);
 			path = "Add Item View";
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				2D81071B2344F1D900768D23 /* ForgottenPasswordViewController.swift */,
 				2D81071C2344F1DA00768D23 /* ForgottenPasswordViewController.xib */,
 				2D8107202344F5A900768D23 /* ForgottenPasswordPresenter.swift */,
+				D69B21DE23479E12006C2030 /* ForgottenPasswordPresenterTest.swift */,
 			);
 			path = "Forgotten Password Screen";
 			sourceTree = "<group>";
@@ -463,7 +469,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9E5EC123462A10003B4E5C /* LoginPresenterTest.swift in Sources */,
+				D69B21E12347B05A006C2030 /* AddItemPresenterTest.swift in Sources */,
 				2D9E5EC32346498F003B4E5C /* FireBaseManagerAuthMock.swift in Sources */,
+				D69B21DF23479E12006C2030 /* ForgottenPasswordPresenterTest.swift in Sources */,
 				D6BB0579233FA3F000FA8953 /* Demo_Babylon_TestTests.swift in Sources */,
 				2D9E5EC523469A60003B4E5C /* RegisterPresenterTest.swift in Sources */,
 			);

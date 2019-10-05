@@ -16,9 +16,9 @@ protocol AddItemPresenterProtocol: AnyObject {
 
 class AddItemPresenter {
     private weak var view: AddItemViewControllerProtocol?
-    private var firebaseManager: FirebaseManager
+    private var firebaseManager: FirebaseManagerProtocol
     
-    init(fireBase: FirebaseManager) {
+    init(fireBase: FirebaseManagerProtocol) {
         self.firebaseManager = fireBase
     }
 }
