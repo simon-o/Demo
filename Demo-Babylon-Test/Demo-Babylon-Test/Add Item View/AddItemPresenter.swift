@@ -38,16 +38,16 @@ extension AddItemPresenter: AddItemPresenterProtocol {
         guard let nameItem = view?.getNameTextfield(), let quantityItem = view?.getQuantityTextfield() else { return }
         if let id = id {
             firebaseManager.updateValue(id: id, name: nameItem, quantity: quantityItem) { (error, reference) in
-                if error != nil {
-                    self.view?.alertView(title: "Error", message: error?.localizedDescription ?? "An error happened", buttonTitle: "Ok")
+                if let error = error {
+                    self.view?.alertView(title: "Error", message: error.localizedDescription ?? "An error happened", buttonTitle: "Ok")
                 } else {
                     self.view?.goBack()
                 }
             }
         } else {
             firebaseManager.addValue(name: nameItem, quantity: quantityItem) { (error, reference) in
-                if error != nil {
-                    self.view?.alertView(title: "Error", message: error?.localizedDescription ?? "An error happened", buttonTitle: "Ok")
+                if let error = error {
+                    self.view?.alertView(title: "Error", message: error.localizedDescription ?? "An error happened", buttonTitle: "Ok")
                 } else {
                     self.view?.goBack()
                 }

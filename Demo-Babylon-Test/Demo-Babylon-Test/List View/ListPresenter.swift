@@ -11,7 +11,7 @@ import Foundation
 protocol ListPresenterProtocol: AnyObject {
     func viewDidLoad()
     func attachView(view: ListTableViewControllerProtocol)
-    
+    func buildCell(cell: ListTableViewCellProtocol, index: IndexPath)
     func addClicked()
 }
 
@@ -25,6 +25,15 @@ final class ListPresenter {
 }
 
 extension ListPresenter: ListPresenterProtocol {
+    //TODO: I can use completionBLock to send the action to attriubte to the button from this presenter
+    func buildCell(cell: ListTableViewCellProtocol, index: IndexPath) {
+        cell.setNameLabel(name: "pain")
+        cell.setQuantityLabel(quantity: "1")
+        
+        cell.editButton(title: "Edit")
+        cell.deleteButton(title: "Delete")
+    }
+    
     func addClicked() {
         view?.goToAddView()
     }
@@ -36,5 +45,7 @@ extension ListPresenter: ListPresenterProtocol {
     func viewDidLoad() {
         view?.setNavigationTitle("List")
         view?.setNavigationItem()
+        
+        //TODO: Call get list
     }
 }

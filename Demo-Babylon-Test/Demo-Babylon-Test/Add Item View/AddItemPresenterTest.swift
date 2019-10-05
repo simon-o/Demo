@@ -16,25 +16,25 @@ class AddItemPresenterTest: XCTestCase {
     }
 }
 
-class AddItemViewController: AddItemViewControllerProtocol {
-    var 
-    func setNavigationItem() {
-        <#code#>
-    }
-    
-    func setNameTextfieldPlaceholder(text: String) {
-        <#code#>
-    }
-    
-    func setQuantityTextfieldPlaceholder(text: String) {
-        <#code#>
-    }
-    
-    func getNameTextfield() -> String {
-        <#code#>
-    }
-    
-    func getQuantityTextfield() -> String {
-        <#code#>
-    }
-}
+//class AddItemViewController: AddItemViewControllerProtocol {
+////    var 
+//    func setNavigationItem() {
+//        <#code#>
+//    }
+//    
+//    func setNameTextfieldPlaceholder(text: String) {
+//        <#code#>
+//    }
+//    
+//    func setQuantityTextfieldPlaceholder(text: String) {
+//        <#code#>
+//    }
+//    
+//    func getNameTextfield() -> String {
+//        <#code#>
+//    }
+//    
+//    func getQuantityTextfield() -> String {
+//        <#code#>
+//    }
+//}

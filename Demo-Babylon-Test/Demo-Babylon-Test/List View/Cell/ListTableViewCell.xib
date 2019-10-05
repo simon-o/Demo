@@ -25,10 +25,16 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTT-wJ-yrr">
                         <rect key="frame" x="259" y="8" width="46" height="56"/>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="deleteButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zeE-od-f3U"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI1-lP-q4J">
                         <rect key="frame" x="205" y="8" width="46" height="56"/>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="editButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a1N-RM-awP"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLx-Tx-pz8">
                         <rect key="frame" x="16" y="43" width="35.5" height="17"/>
@@ -55,7 +61,7 @@
                 <outlet property="deleteButton" destination="jTT-wJ-yrr" id="3fU-l7-3Bb"/>
                 <outlet property="editButton" destination="lI1-lP-q4J" id="W3F-kg-feA"/>
                 <outlet property="nameLabel" destination="760-PS-3T4" id="yLp-mC-ZEF"/>
-                <outlet property="quantity" destination="wLx-Tx-pz8" id="gMo-n2-g9O"/>
+                <outlet property="quantityLabel" destination="wLx-Tx-pz8" id="KPw-Cs-qMS"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="129.24107142857142"/>
         </tableViewCell>

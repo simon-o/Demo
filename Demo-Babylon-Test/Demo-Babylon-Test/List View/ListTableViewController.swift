@@ -12,6 +12,7 @@ protocol ListTableViewControllerProtocol: AnyObject {
     func reload()
     func setNavigationTitle(_ title: String)
     func setNavigationItem()
+    func setNavigationItemCounter()
     
     func goToAddView()
 }
@@ -31,6 +32,8 @@ final class ListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.register(UINib.init(nibName: String(describing: ListTableViewCell.self), bundle: nil), forCellReuseIdentifier: "ListTableViewCell")
+            
         presenter.attachView(view: self)
         presenter.viewDidLoad()
      
@@ -45,7 +48,15 @@ final class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell:ListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as? ListTableViewCell {
+            presenter.buildCell(cell: cell, index: indexPath)
+             return cell
+        }
+        return UITableViewCell()
     }
     
     @objc func addClicked() {
@@ -68,7 +79,7 @@ extension ListTableViewController: ListTableViewControllerProtocol {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addClicked))
     }
     
-    func setNavigationItemCouner() {
+    func setNavigationItemCounter() {
         //TODO: Need to be done with RXSwift to learn
     }
     

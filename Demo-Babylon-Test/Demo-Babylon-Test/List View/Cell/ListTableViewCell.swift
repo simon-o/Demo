@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ListTableViewCellProtocol {
+protocol ListTableViewCellProtocol: AnyObject {
     func setNameLabel(name: String)
     func setQuantityLabel(quantity: String)
     func editButton(title: String)
@@ -18,7 +18,7 @@ protocol ListTableViewCellProtocol {
 class ListTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var quantity: UILabel!
+    @IBOutlet private weak var quantityLabel: UILabel!
     @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var deleteButton: UIButton!
     
@@ -33,8 +33,29 @@ class ListTableViewCell: UITableViewCell {
         
     }
     
+    @IBAction func editButtonClicked(_ sender: Any) {
+        
+    }
+    
+    @IBAction func deleteButtonClicked(_ sender: Any) {
+        
+    }
 }
 
 extension ListTableViewCell: ListTableViewCellProtocol {
+    func setNameLabel(name: String) {
+        nameLabel.text = name
+    }
     
+    func setQuantityLabel(quantity: String) {
+        quantityLabel.text = quantity
+    }
+    
+    func editButton(title: String) {
+        editButton.setTitle(title, for: .normal)
+    }
+    
+    func deleteButton(title: String) {
+        deleteButton.setTitle(title, for: .normal)
+    }
 }
