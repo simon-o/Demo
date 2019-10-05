@@ -8,13 +8,15 @@
 
 import UIKit
 
-protocol AddItemViewControllerProtocol: AnyObject {
+protocol AddItemViewControllerProtocol: BaseViewControllerProtocol {
     func setNavigationItem()
     func setNameTextfieldPlaceholder(text: String)
     func setQuantityTextfieldPlaceholder(text: String)
     
     func getNameTextfield() -> String
     func getQuantityTextfield() -> String
+    
+    func goBack()
 }
 
 class AddItemViewController: UIViewController {
@@ -62,11 +64,15 @@ class AddItemViewController: UIViewController {
     }
     
     @objc func saveClicked() {
-        presenter.saveClicked()
+        presenter.saveClicked(id: nil)
     }
 }
 
 extension AddItemViewController: AddItemViewControllerProtocol {
+    func goBack() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     func setNameTextfieldPlaceholder(text: String) {
         itemNameTextField.placeholder = text
     }

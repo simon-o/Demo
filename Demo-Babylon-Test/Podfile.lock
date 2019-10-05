@@ -9,6 +9,9 @@ PODS:
     - FirebaseAnalytics (= 6.1.1)
   - Firebase/CoreOnly (6.7.0):
     - FirebaseCore (= 6.2.1)
+  - Firebase/Database (6.7.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 6.1.0)
   - FirebaseAnalytics (6.1.1):
     - FirebaseCore (~> 6.2)
     - FirebaseInstanceID (~> 4.2)
@@ -36,6 +39,10 @@ PODS:
     - GoogleUtilities/Environment (~> 6.2)
     - GoogleUtilities/Logger (~> 6.2)
   - FirebaseCoreDiagnosticsInterop (1.0.0)
+  - FirebaseDatabase (6.1.0):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - leveldb-library (~> 1.18)
   - FirebaseInstanceID (4.2.3):
     - FirebaseCore (~> 6.0)
     - GoogleUtilities/Environment (~> 6.0)
@@ -69,6 +76,7 @@ PODS:
   - GoogleUtilities/UserDefaults (6.2.5):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
+  - leveldb-library (1.22)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -84,6 +92,7 @@ PODS:
 DEPENDENCIES:
   - Firebase
   - Firebase/Auth
+  - Firebase/Database
   - RxCocoa
   - RxSwift
 
@@ -96,12 +105,14 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
+    - FirebaseDatabase
     - FirebaseInstanceID
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - GTMSessionFetcher
+    - leveldb-library
     - nanopb
     - RxCocoa
     - RxRelay
@@ -115,17 +126,19 @@ SPEC CHECKSUMS:
   FirebaseCore: 32b48f41c84a56fbde73b35ed01a830b3b6dc048
   FirebaseCoreDiagnostics: 4c04ae09d0ab027c30179828c6bb47764df1bd13
   FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
+  FirebaseDatabase: 518cd94286de2ee999e19383a2a6ae04c81ce993
   FirebaseInstanceID: 8b42755db950682e7de0d167bc6fb26a57b244af
   GoogleAppMeasurement: 86a82f0e1f20b8eedf8e20326530138fd71409de
   GoogleDataTransport: 91e682bd60a49d3f8f69f2e909a66efaed5a1e7a
   GoogleDataTransportCCTSupport: 6b545f7149111180763dc18c6f372c963de4a310
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
-PODFILE CHECKSUM: 37be7e54f6982b091c542d90beb3195e6245bf8b
+PODFILE CHECKSUM: 4314efcefe8edbec301e7b8bc17731d85faca365
 
 COCOAPODS: 1.7.5

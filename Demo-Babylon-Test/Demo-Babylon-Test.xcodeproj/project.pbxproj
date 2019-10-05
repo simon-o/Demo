@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D02CAF82348CBBA0078BE24 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAF62348CBBA0078BE24 /* ListTableViewCell.swift */; };
+		2D02CAF92348CBBA0078BE24 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */; };
+		2D02CAFC2348D3090078BE24 /* ListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAFB2348D3090078BE24 /* ListCellPresenter.swift */; };
 		2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BD2345F0850023D8DB /* FireBaseManager.swift */; };
 		2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */; };
 		2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */; };
@@ -50,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		03325BD627BE7E6AC404A502 /* Pods-Demo-Babylon-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-Babylon-Test.debug.xcconfig"; path = "Target Support Files/Pods-Demo-Babylon-Test/Pods-Demo-Babylon-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02CAF62348CBBA0078BE24 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		2D02CAFB2348D3090078BE24 /* ListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellPresenter.swift; sourceTree = "<group>"; };
 		2D3070BD2345F0850023D8DB /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
@@ -108,6 +114,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D02CAFA2348CBBF0078BE24 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D02CAF62348CBBA0078BE24 /* ListTableViewCell.swift */,
+				2D02CAFB2348D3090078BE24 /* ListCellPresenter.swift */,
+				2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2D3070C32345FA620023D8DB /* Add Item View */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +179,7 @@
 				D69B21D7234541CD006C2030 /* ListTableViewController.swift */,
 				D69B21D8234541CD006C2030 /* ListTableViewController.xib */,
 				D69B21DC23454630006C2030 /* ListPresenter.swift */,
+				2D02CAFA2348CBBF0078BE24 /* Cell */,
 			);
 			path = "List View";
 			sourceTree = "<group>";
@@ -335,6 +352,7 @@
 				2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */,
 				2D81071E2344F1DA00768D23 /* ForgottenPasswordViewController.xib in Resources */,
 				D6BB056E233FA3EF00FA8953 /* LaunchScreen.storyboard in Resources */,
+				2D02CAF92348CBBA0078BE24 /* ListTableViewCell.xib in Resources */,
 				D67E8F382340D83200C11C35 /* GoogleService-Info.plist in Resources */,
 				D6BB056B233FA3EF00FA8953 /* Assets.xcassets in Resources */,
 				D6BB0592233FE6B800FA8953 /* RegisterViewController.xib in Resources */,
@@ -421,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BB058E233FD3A200FA8953 /* LoginPresenter.swift in Sources */,
+				2D02CAF82348CBBA0078BE24 /* ListTableViewCell.swift in Sources */,
 				D67E8F3D2340E44400C11C35 /* FirebaseManagerAuth.swift in Sources */,
 				2D81071D2344F1DA00768D23 /* ForgottenPasswordViewController.swift in Sources */,
 				D6BB0595233FE81100FA8953 /* RegisterPresenter.swift in Sources */,
@@ -432,6 +451,7 @@
 				D6BB0564233FA3EE00FA8953 /* SceneDelegate.swift in Sources */,
 				2D3070C52345FA800023D8DB /* AddItemPresenter.swift in Sources */,
 				2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */,
+				2D02CAFC2348D3090078BE24 /* ListCellPresenter.swift in Sources */,
 				2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */,
 				D69B21DD23454630006C2030 /* ListPresenter.swift in Sources */,
 				2D8107212344F5A900768D23 /* ForgottenPasswordPresenter.swift in Sources */,
