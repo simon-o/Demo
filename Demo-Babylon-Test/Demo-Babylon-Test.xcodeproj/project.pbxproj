@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D02CAF82348CBBA0078BE24 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAF62348CBBA0078BE24 /* ListTableViewCell.swift */; };
 		2D02CAF92348CBBA0078BE24 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */; };
-		2D02CAFC2348D3090078BE24 /* ListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAFB2348D3090078BE24 /* ListCellPresenter.swift */; };
+		2D02CAFE234A0E470078BE24 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAFD234A0E470078BE24 /* ListPresenter.swift */; };
 		2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BD2345F0850023D8DB /* FireBaseManager.swift */; };
 		2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */; };
 		2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */; };
@@ -56,7 +56,7 @@
 		03325BD627BE7E6AC404A502 /* Pods-Demo-Babylon-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo-Babylon-Test.debug.xcconfig"; path = "Target Support Files/Pods-Demo-Babylon-Test/Pods-Demo-Babylon-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02CAF62348CBBA0078BE24 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
-		2D02CAFB2348D3090078BE24 /* ListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellPresenter.swift; sourceTree = "<group>"; };
+		2D02CAFD234A0E470078BE24 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		2D3070BD2345F0850023D8DB /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				2D02CAF62348CBBA0078BE24 /* ListTableViewCell.swift */,
-				2D02CAFB2348D3090078BE24 /* ListCellPresenter.swift */,
 				2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */,
 			);
 			path = Cell;
@@ -182,6 +181,7 @@
 			children = (
 				D69B21D7234541CD006C2030 /* ListTableViewController.swift */,
 				D69B21D8234541CD006C2030 /* ListTableViewController.xib */,
+				2D02CAFD234A0E470078BE24 /* ListPresenter.swift */,
 				2D02CAFA2348CBBF0078BE24 /* Cell */,
 			);
 			path = "List View";
@@ -451,10 +451,10 @@
 				D6BB058A233FA57700FA8953 /* LoginViewController.swift in Sources */,
 				D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */,
 				D69B21D9234541CD006C2030 /* ListTableViewController.swift in Sources */,
+				2D02CAFE234A0E470078BE24 /* ListPresenter.swift in Sources */,
 				D6BB0564233FA3EE00FA8953 /* SceneDelegate.swift in Sources */,
 				2D3070C52345FA800023D8DB /* AddItemPresenter.swift in Sources */,
 				2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */,
-				2D02CAFC2348D3090078BE24 /* ListCellPresenter.swift in Sources */,
 				2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */,
 				2D8107212344F5A900768D23 /* ForgottenPasswordPresenter.swift in Sources */,
 			);
