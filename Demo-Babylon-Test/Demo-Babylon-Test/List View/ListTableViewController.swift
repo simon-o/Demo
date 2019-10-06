@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ListTableViewControllerProtocol: AnyObject {
+protocol ListTableViewControllerProtocol: BaseViewControllerProtocol {
     func reload()
     func setNavigationTitle(_ title: String)
     func setNavigationItem()

@@ -20,14 +20,14 @@ protocol ListPresenterProtocol: AnyObject {
 
 final class ListPresenter {
     private weak var view: ListTableViewControllerProtocol?
-    private var firebaseManager: FirebaseManager
+    private var firebaseManager: FirebaseManagerProtocol
     private var listItems: [ItemList]? {
         didSet {
             view?.reload()
         }
     }
     
-    init(fireBase: FirebaseManager) {
+    init(fireBase: FirebaseManagerProtocol) {
         self.firebaseManager = fireBase
     }
 }
@@ -57,6 +57,8 @@ extension ListPresenter: ListPresenterProtocol {
         
         cell.setActionDelete {
             self.firebaseManager.removeValue(id: items[index.row].key) { (error, reference) in
+                guard let error = error else { return }
+                self.view?.alertView(title: "Error", message: error.localizedDescription, buttonTitle: "Ok")
             }
         }
     }
