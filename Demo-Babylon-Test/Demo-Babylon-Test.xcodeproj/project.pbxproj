@@ -10,6 +10,7 @@
 		2D02CAF82348CBBA0078BE24 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAF62348CBBA0078BE24 /* ListTableViewCell.swift */; };
 		2D02CAF92348CBBA0078BE24 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */; };
 		2D02CAFE234A0E470078BE24 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAFD234A0E470078BE24 /* ListPresenter.swift */; };
+		2D02CB00234A133F0078BE24 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAFF234A133F0078BE24 /* ItemsModel.swift */; };
 		2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BD2345F0850023D8DB /* FireBaseManager.swift */; };
 		2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */; };
 		2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */; };
@@ -57,6 +58,7 @@
 		2D02CAF62348CBBA0078BE24 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		2D02CAFD234A0E470078BE24 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		2D02CAFF234A133F0078BE24 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
 		2D3070BD2345F0850023D8DB /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
@@ -150,8 +152,8 @@
 		2D8107222345006400768D23 /* Firebase Manager */ = {
 			isa = PBXGroup;
 			children = (
-				D67E8F3C2340E44400C11C35 /* FirebaseManagerAuth.swift */,
 				2D3070BD2345F0850023D8DB /* FireBaseManager.swift */,
+				D67E8F3C2340E44400C11C35 /* FirebaseManagerAuth.swift */,
 				2D9E5EC22346498F003B4E5C /* FireBaseManagerAuthMock.swift */,
 			);
 			path = "Firebase Manager";
@@ -212,6 +214,7 @@
 			children = (
 				D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */,
 				D6BB0563233FA3EE00FA8953 /* SceneDelegate.swift */,
+				2D02CAFF234A133F0078BE24 /* ItemsModel.swift */,
 				2D3070C32345FA620023D8DB /* Add Item View */,
 				D69B21DB234541D0006C2030 /* List View */,
 				D69B21D2234530A7006C2030 /* Base VC */,
@@ -452,6 +455,7 @@
 				D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */,
 				D69B21D9234541CD006C2030 /* ListTableViewController.swift in Sources */,
 				2D02CAFE234A0E470078BE24 /* ListPresenter.swift in Sources */,
+				2D02CB00234A133F0078BE24 /* ItemsModel.swift in Sources */,
 				D6BB0564233FA3EE00FA8953 /* SceneDelegate.swift in Sources */,
 				2D3070C52345FA800023D8DB /* AddItemPresenter.swift in Sources */,
 				2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */,

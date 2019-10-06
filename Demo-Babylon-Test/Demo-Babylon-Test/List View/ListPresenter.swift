@@ -13,11 +13,19 @@ protocol ListPresenterProtocol: AnyObject {
     func attachView(view: ListTableViewControllerProtocol)
     func buildCell(cell: ListTableViewCellProtocol, index: IndexPath)
     func addClicked()
+    
+    func getNumberSection() -> Int
+    func getNumberRow(for section: Int) -> Int
 }
 
 final class ListPresenter {
     private weak var view: ListTableViewControllerProtocol?
     private var firebaseManager: FirebaseManager
+    private var listItems: [ItemList]? {
+        didSet {
+            view?.reload()
+        }
+    }
     
     init(fireBase: FirebaseManager) {
         self.firebaseManager = fireBase
@@ -25,11 +33,21 @@ final class ListPresenter {
 }
 
 extension ListPresenter: ListPresenterProtocol {
+    func getNumberSection() -> Int {
+        return 1
+    }
+    
+    func getNumberRow(for section: Int) -> Int{
+        return listItems?.count ?? 0
+    }
+    
     //TODO: I can use completionBLock to send the action to attriubte to the button from this presenter
     func buildCell(cell: ListTableViewCellProtocol, index: IndexPath) {
-        cell.setNameLabel(name: "pain")
-        cell.setQuantityLabel(quantity: "1")
+        guard let items = listItems else { return }
         
+        cell.setNameLabel(name: items[index.row].name)
+        cell.setQuantityLabel(quantity: items[index.row].quantity)
+            
         cell.editButton(title: "Edit")
         cell.deleteButton(title: "Delete")
     }
@@ -46,6 +64,8 @@ extension ListPresenter: ListPresenterProtocol {
         view?.setNavigationTitle("List")
         view?.setNavigationItem()
         
-        //TODO: Call get list
+        firebaseManager.getListForUser { (itemsList) in
+            self.listItems = itemsList
+        }
     }
 }

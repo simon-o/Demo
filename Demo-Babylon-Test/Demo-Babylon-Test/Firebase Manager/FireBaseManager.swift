@@ -14,6 +14,7 @@ protocol FirebaseManagerProtocol: AnyObject {
     func addValue(name: String, quantity: String, completion: @escaping ((Error?, DatabaseReference) -> Void))
     func removeValue(id: String, completion: @escaping ((Error?, DatabaseReference) -> Void))
     func updateValue(id: String, name: String, quantity: String, completion: @escaping ((Error?, DatabaseReference) -> Void))
+    func getListForUser(completion: @escaping (([ItemList]) -> Void))
 }
 
 final class FirebaseManager: FirebaseManagerProtocol{
@@ -37,5 +38,12 @@ final class FirebaseManager: FirebaseManagerProtocol{
                                     "quantity" : quantity]
 
         ref.child(userID!).child(id).updateChildValues(entry, withCompletionBlock: completion)
+    }
+    
+    func getListForUser(completion: @escaping (([ItemList]) -> Void)) {
+        let userID = Auth.auth().currentUser?.uid ?? ""
+        ref.child(userID).observe(.value) { (snapshot) in
+            completion(Parser().parseItemList(snapshot: snapshot))
+        }
     }
 }

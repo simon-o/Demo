@@ -39,7 +39,7 @@ extension AddItemPresenter: AddItemPresenterProtocol {
         if let id = id {
             firebaseManager.updateValue(id: id, name: nameItem, quantity: quantityItem) { (error, reference) in
                 if let error = error {
-                    self.view?.alertView(title: "Error", message: error.localizedDescription ?? "An error happened", buttonTitle: "Ok")
+                    self.view?.alertView(title: "Error", message: error.localizedDescription, buttonTitle: "Ok")
                 } else {
                     self.view?.goBack()
                 }
@@ -47,7 +47,7 @@ extension AddItemPresenter: AddItemPresenterProtocol {
         } else {
             firebaseManager.addValue(name: nameItem, quantity: quantityItem) { (error, reference) in
                 if let error = error {
-                    self.view?.alertView(title: "Error", message: error.localizedDescription ?? "An error happened", buttonTitle: "Ok")
+                    self.view?.alertView(title: "Error", message: error.localizedDescription, buttonTitle: "Ok")
                 } else {
                     self.view?.goBack()
                 }
