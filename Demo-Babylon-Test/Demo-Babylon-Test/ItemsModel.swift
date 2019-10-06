@@ -12,6 +12,7 @@ import FirebaseDatabase
 struct ItemList: Codable {
     var name: String
     var quantity: String
+    var key: String
 }
 
 final class Parser {
@@ -22,7 +23,7 @@ final class Parser {
         var itemsList: [ItemList] = []
         keys?.forEach({ (key) in
             let item = value?[key] as? [String: String]
-            itemsList.append(ItemList(name: (item?["name"])!, quantity: (item?["quantity"])!))
+            itemsList.append(ItemList(name: (item?["name"])!, quantity: (item?["quantity"])!, key: key as! String))
         })
         return itemsList
     }

@@ -50,6 +50,15 @@ extension ListPresenter: ListPresenterProtocol {
             
         cell.editButton(title: "Edit")
         cell.deleteButton(title: "Delete")
+        
+        cell.setActionEdit {
+            
+        }
+        
+        cell.setActionDelete {
+            self.firebaseManager.removeValue(id: items[index.row].key) { (error, reference) in
+            }
+        }
     }
     
     func addClicked() {

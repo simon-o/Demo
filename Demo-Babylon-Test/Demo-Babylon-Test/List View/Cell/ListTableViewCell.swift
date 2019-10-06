@@ -13,6 +13,9 @@ protocol ListTableViewCellProtocol: AnyObject {
     func setQuantityLabel(quantity: String)
     func editButton(title: String)
     func deleteButton(title: String)
+    
+    func setActionEdit(completion: @escaping (() -> Void))
+    func setActionDelete(completion: @escaping (() -> Void))
 }
 
 class ListTableViewCell: UITableViewCell {
@@ -21,6 +24,9 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet private weak var quantityLabel: UILabel!
     @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var deleteButton: UIButton!
+    
+    var actionEdit: (() -> Void)?
+    var actionDelete: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,15 +40,25 @@ class ListTableViewCell: UITableViewCell {
     }
     
     @IBAction func editButtonClicked(_ sender: Any) {
-        
+        guard let action = actionEdit else { return }
+        action()
     }
     
     @IBAction func deleteButtonClicked(_ sender: Any) {
-        
+        guard let action = actionDelete else { return }
+        action()
     }
 }
 
 extension ListTableViewCell: ListTableViewCellProtocol {
+    func setActionEdit(completion: @escaping (() -> Void)) {
+        self.actionEdit = completion
+    }
+    
+    func setActionDelete(completion: @escaping (() -> Void)) {
+        self.actionDelete = completion
+    }
+    
     func setNameLabel(name: String) {
         nameLabel.text = name
     }

@@ -15,6 +15,7 @@ protocol ListTableViewControllerProtocol: AnyObject {
     func setNavigationItemCounter()
     
     func goToAddView()
+    func goToEditView()
 }
 
 final class ListTableViewController: UITableViewController {
@@ -67,6 +68,10 @@ final class ListTableViewController: UITableViewController {
 }
 
 extension ListTableViewController: ListTableViewControllerProtocol {
+    func goToEditView() {
+        
+    }
+    
     func goToAddView() {
         let presenter = AddItemPresenter(fireBase: FirebaseManager())
         let viewController = AddItemViewController(presenter: presenter)
