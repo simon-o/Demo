@@ -11,15 +11,17 @@ import Foundation
 protocol AddItemPresenterProtocol: AnyObject {
     func attachView(_ view: AddItemViewControllerProtocol)
     func viewDidLoad()
-    func saveClicked(id: String?)
+    func saveClicked()
 }
 
 class AddItemPresenter {
     private weak var view: AddItemViewControllerProtocol?
     private var firebaseManager: FirebaseManagerProtocol
+    private var item: ItemList?
     
-    init(fireBase: FirebaseManagerProtocol) {
+    init(fireBase: FirebaseManagerProtocol, item: ItemList?) {
         self.firebaseManager = fireBase
+        self.item = item
     }
 }
 
@@ -32,11 +34,15 @@ extension AddItemPresenter: AddItemPresenterProtocol {
         view?.setNavigationItem()
         view?.setNameTextfieldPlaceholder(text: "Name Item")
         view?.setQuantityTextfieldPlaceholder(text: "Quantity")
+        
+        guard let item = item else { return }
+        view?.setNameTextfieldText(text: item.name)
+        view?.setQuantityTextfield(text: item.quantity)
     }
     
-    func saveClicked(id: String?) {
+    func saveClicked() {
         guard let nameItem = view?.getNameTextfield(), let quantityItem = view?.getQuantityTextfield() else { return }
-        if let id = id {
+        if let id = self.item?.key {
             firebaseManager.updateValue(id: id, name: nameItem, quantity: quantityItem) { (error, reference) in
                 if let error = error {
                     self.view?.alertView(title: "Error", message: error.localizedDescription, buttonTitle: "Ok")

@@ -52,7 +52,7 @@ extension ListPresenter: ListPresenterProtocol {
         cell.deleteButton(title: "Delete")
         
         cell.setActionEdit {
-            
+            self.view?.goToEditView(item: items[index.row])
         }
         
         cell.setActionDelete {

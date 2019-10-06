@@ -12,6 +12,8 @@ protocol AddItemViewControllerProtocol: BaseViewControllerProtocol {
     func setNavigationItem()
     func setNameTextfieldPlaceholder(text: String)
     func setQuantityTextfieldPlaceholder(text: String)
+    func setNameTextfieldText(text: String)
+    func setQuantityTextfield(text: String)
     
     func getNameTextfield() -> String
     func getQuantityTextfield() -> String
@@ -64,11 +66,19 @@ class AddItemViewController: UIViewController {
     }
     
     @objc func saveClicked() {
-        presenter.saveClicked(id: nil)
+        presenter.saveClicked()
     }
 }
 
 extension AddItemViewController: AddItemViewControllerProtocol {
+    func setNameTextfieldText(text: String) {
+        itemNameTextField.text = text
+    }
+    
+    func setQuantityTextfield(text: String) {
+        quantityTextField.text = text
+    }
+    
     func goBack() {
         navigationController?.popToRootViewController(animated: true)
     }
