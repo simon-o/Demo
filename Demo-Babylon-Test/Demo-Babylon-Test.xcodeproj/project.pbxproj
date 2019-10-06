@@ -11,6 +11,7 @@
 		2D02CAF92348CBBA0078BE24 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */; };
 		2D02CAFE234A0E470078BE24 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAFD234A0E470078BE24 /* ListPresenter.swift */; };
 		2D02CB00234A133F0078BE24 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAFF234A133F0078BE24 /* ItemsModel.swift */; };
+		2D02CB04234A44DA0078BE24 /* FireBaseManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CB02234A44A00078BE24 /* FireBaseManagerMock.swift */; };
 		2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BD2345F0850023D8DB /* FireBaseManager.swift */; };
 		2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */; };
 		2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */; };
@@ -59,6 +60,7 @@
 		2D02CAF72348CBBA0078BE24 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		2D02CAFD234A0E470078BE24 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		2D02CAFF234A133F0078BE24 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
+		2D02CB02234A44A00078BE24 /* FireBaseManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManagerMock.swift; sourceTree = "<group>"; };
 		2D3070BD2345F0850023D8DB /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2D02CB01234A38BF0078BE24 /* Item Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D02CAFF234A133F0078BE24 /* ItemsModel.swift */,
+			);
+			path = "Item Model";
+			sourceTree = "<group>";
+		};
 		2D3070C32345FA620023D8DB /* Add Item View */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				2D3070BD2345F0850023D8DB /* FireBaseManager.swift */,
+				2D02CB02234A44A00078BE24 /* FireBaseManagerMock.swift */,
 				D67E8F3C2340E44400C11C35 /* FirebaseManagerAuth.swift */,
 				2D9E5EC22346498F003B4E5C /* FireBaseManagerAuthMock.swift */,
 			);
@@ -214,7 +225,7 @@
 			children = (
 				D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */,
 				D6BB0563233FA3EE00FA8953 /* SceneDelegate.swift */,
-				2D02CAFF234A133F0078BE24 /* ItemsModel.swift */,
+				2D02CB01234A38BF0078BE24 /* Item Model */,
 				2D3070C32345FA620023D8DB /* Add Item View */,
 				D69B21DB234541D0006C2030 /* List View */,
 				D69B21D2234530A7006C2030 /* Base VC */,
@@ -471,6 +482,7 @@
 				2D9E5EC123462A10003B4E5C /* LoginPresenterTest.swift in Sources */,
 				D69B21E12347B05A006C2030 /* AddItemPresenterTest.swift in Sources */,
 				2D9E5EC32346498F003B4E5C /* FireBaseManagerAuthMock.swift in Sources */,
+				2D02CB04234A44DA0078BE24 /* FireBaseManagerMock.swift in Sources */,
 				D69B21DF23479E12006C2030 /* ForgottenPasswordPresenterTest.swift in Sources */,
 				D6BB0579233FA3F000FA8953 /* Demo_Babylon_TestTests.swift in Sources */,
 				2D9E5EC523469A60003B4E5C /* RegisterPresenterTest.swift in Sources */,
