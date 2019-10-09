@@ -12,6 +12,7 @@ protocol AddItemPresenterProtocol: AnyObject {
     func attachView(_ view: AddItemViewControllerProtocol)
     func viewDidLoad()
     func saveClicked()
+    func buttonCLicked()
 }
 
 class AddItemPresenter {
@@ -26,6 +27,10 @@ class AddItemPresenter {
 }
 
 extension AddItemPresenter: AddItemPresenterProtocol {
+    func buttonCLicked() {
+        view?.goToOCR()
+    }
+    
     func attachView(_ view: AddItemViewControllerProtocol) {
         self.view = view
     }
@@ -34,10 +39,12 @@ extension AddItemPresenter: AddItemPresenterProtocol {
         view?.setNavigationItem()
         view?.setNameTextfieldPlaceholder(text: "Name Item")
         view?.setQuantityTextfieldPlaceholder(text: "Quantity")
+        view?.setButtonTitle(title: "OCR")
         
         guard let item = item else { return }
         view?.setNameTextfieldText(text: item.name)
         view?.setQuantityTextfield(text: item.quantity)
+        
     }
     
     func saveClicked() {

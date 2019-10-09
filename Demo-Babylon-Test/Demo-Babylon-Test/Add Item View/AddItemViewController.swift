@@ -14,10 +14,12 @@ protocol AddItemViewControllerProtocol: BaseViewControllerProtocol {
     func setQuantityTextfieldPlaceholder(text: String)
     func setNameTextfieldText(text: String)
     func setQuantityTextfield(text: String)
+    func setButtonTitle(title: String)
     
     func getNameTextfield() -> String
     func getQuantityTextfield() -> String
     
+    func goToOCR()
     func goBack()
 }
 
@@ -26,6 +28,7 @@ class AddItemViewController: UIViewController {
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var itemNameTextField: UITextField!
     @IBOutlet private weak var quantityTextField: UITextField!
+    @IBOutlet weak var ocrButton: UIButton!
     
     private let presenter: AddItemPresenterProtocol
     
@@ -68,9 +71,22 @@ class AddItemViewController: UIViewController {
     @objc func saveClicked() {
         presenter.saveClicked()
     }
+    @IBAction func ocrButtonClicked(_ sender: Any) {
+        presenter.buttonCLicked()
+    }
 }
 
 extension AddItemViewController: AddItemViewControllerProtocol {
+    func goToOCR() {
+        let presenter = OCRPresenter(delegate: self)
+        let viewController = OCRViewController(presenter: presenter)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func setButtonTitle(title: String) {
+        ocrButton.setTitle(title, for: .normal)
+    }
+    
     func setNameTextfieldText(text: String) {
         itemNameTextField.text = text
     }
@@ -101,5 +117,11 @@ extension AddItemViewController: AddItemViewControllerProtocol {
     
     func setNavigationItem() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveClicked))
+    }
+}
+
+extension AddItemViewController: OCRPresenterDelegate {
+    func fillWith(name: String) {
+        
     }
 }

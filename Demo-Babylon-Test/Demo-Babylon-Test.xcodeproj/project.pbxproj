@@ -13,6 +13,9 @@
 		2D02CB00234A133F0078BE24 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CAFF234A133F0078BE24 /* ItemsModel.swift */; };
 		2D02CB04234A44DA0078BE24 /* FireBaseManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CB02234A44A00078BE24 /* FireBaseManagerMock.swift */; };
 		2D02CB06234A88BC0078BE24 /* ListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CB05234A88BC0078BE24 /* ListPresenterTest.swift */; };
+		2D02CB09234E184C0078BE24 /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CB07234E184C0078BE24 /* OCRViewController.swift */; };
+		2D02CB0A234E184C0078BE24 /* OCRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D02CB08234E184C0078BE24 /* OCRViewController.xib */; };
+		2D02CB0D234E1B650078BE24 /* OCRPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CB0C234E1B650078BE24 /* OCRPresenter.swift */; };
 		2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BD2345F0850023D8DB /* FireBaseManager.swift */; };
 		2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */; };
 		2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */; };
@@ -63,6 +66,9 @@
 		2D02CAFF234A133F0078BE24 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
 		2D02CB02234A44A00078BE24 /* FireBaseManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManagerMock.swift; sourceTree = "<group>"; };
 		2D02CB05234A88BC0078BE24 /* ListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTest.swift; sourceTree = "<group>"; };
+		2D02CB07234E184C0078BE24 /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
+		2D02CB08234E184C0078BE24 /* OCRViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OCRViewController.xib; sourceTree = "<group>"; };
+		2D02CB0C234E1B650078BE24 /* OCRPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRPresenter.swift; sourceTree = "<group>"; };
 		2D3070BD2345F0850023D8DB /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
@@ -137,6 +143,16 @@
 				2D02CAFF234A133F0078BE24 /* ItemsModel.swift */,
 			);
 			path = "Item Model";
+			sourceTree = "<group>";
+		};
+		2D02CB0B234E18DC0078BE24 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				2D02CB07234E184C0078BE24 /* OCRViewController.swift */,
+				2D02CB08234E184C0078BE24 /* OCRViewController.xib */,
+				2D02CB0C234E1B650078BE24 /* OCRPresenter.swift */,
+			);
+			path = OCR;
 			sourceTree = "<group>";
 		};
 		2D3070C32345FA620023D8DB /* Add Item View */ = {
@@ -228,6 +244,7 @@
 			children = (
 				D6BB0561233FA3EE00FA8953 /* AppDelegate.swift */,
 				D6BB0563233FA3EE00FA8953 /* SceneDelegate.swift */,
+				2D02CB0B234E18DC0078BE24 /* OCR */,
 				2D02CB01234A38BF0078BE24 /* Item Model */,
 				2D3070C32345FA620023D8DB /* Add Item View */,
 				D69B21DB234541D0006C2030 /* List View */,
@@ -371,6 +388,7 @@
 				D69B21D4234530E1006C2030 /* LoginViewController.xib in Resources */,
 				2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */,
 				2D81071E2344F1DA00768D23 /* ForgottenPasswordViewController.xib in Resources */,
+				2D02CB0A234E184C0078BE24 /* OCRViewController.xib in Resources */,
 				D6BB056E233FA3EF00FA8953 /* LaunchScreen.storyboard in Resources */,
 				2D02CAF92348CBBA0078BE24 /* ListTableViewCell.xib in Resources */,
 				D67E8F382340D83200C11C35 /* GoogleService-Info.plist in Resources */,
@@ -461,6 +479,7 @@
 				D6BB058E233FD3A200FA8953 /* LoginPresenter.swift in Sources */,
 				2D02CAF82348CBBA0078BE24 /* ListTableViewCell.swift in Sources */,
 				D67E8F3D2340E44400C11C35 /* FirebaseManagerAuth.swift in Sources */,
+				2D02CB0D234E1B650078BE24 /* OCRPresenter.swift in Sources */,
 				2D81071D2344F1DA00768D23 /* ForgottenPasswordViewController.swift in Sources */,
 				D6BB0595233FE81100FA8953 /* RegisterPresenter.swift in Sources */,
 				D6BB0591233FE6B800FA8953 /* RegisterViewController.swift in Sources */,
@@ -469,6 +488,7 @@
 				D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */,
 				D69B21D9234541CD006C2030 /* ListTableViewController.swift in Sources */,
 				2D02CAFE234A0E470078BE24 /* ListPresenter.swift in Sources */,
+				2D02CB09234E184C0078BE24 /* OCRViewController.swift in Sources */,
 				2D02CB00234A133F0078BE24 /* ItemsModel.swift in Sources */,
 				D6BB0564233FA3EE00FA8953 /* SceneDelegate.swift in Sources */,
 				2D3070C52345FA800023D8DB /* AddItemPresenter.swift in Sources */,

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddItemViewController" customModule="Demo_Babylon_Test" customModuleProvider="target">
             <connections>
                 <outlet property="itemNameTextField" destination="gwH-hl-Usb" id="np2-Qu-E85"/>
+                <outlet property="ocrButton" destination="OMK-JU-JiX" id="tnM-bV-Fv8"/>
                 <outlet property="quantityTextField" destination="Tny-N9-8WW" id="Uh1-th-Xhf"/>
                 <outlet property="scrollView" destination="mD6-Lv-Mzm" id="IIn-e5-EQw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -39,12 +40,21 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMK-JU-JiX">
+                                    <rect key="frame" x="184" y="246" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="ocrButtonClicked:" destination="-1" eventType="touchUpInside" id="0Xm-8C-Jy3"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="gwH-hl-Usb" secondAttribute="trailing" constant="25" id="3Lb-PP-R3q"/>
                                 <constraint firstItem="Tny-N9-8WW" firstAttribute="top" secondItem="gwH-hl-Usb" secondAttribute="bottom" constant="10" id="8Kj-pb-ezP"/>
+                                <constraint firstItem="OMK-JU-JiX" firstAttribute="centerX" secondItem="Tny-N9-8WW" secondAttribute="centerX" id="9T9-aC-EcG"/>
                                 <constraint firstItem="Tny-N9-8WW" firstAttribute="leading" secondItem="S4J-l2-sDe" secondAttribute="leading" constant="25" id="EBG-qH-fqV"/>
+                                <constraint firstItem="OMK-JU-JiX" firstAttribute="top" secondItem="Tny-N9-8WW" secondAttribute="bottom" constant="18" id="IfB-qX-pmK"/>
                                 <constraint firstAttribute="trailing" secondItem="Tny-N9-8WW" secondAttribute="trailing" constant="25" id="KfN-G5-O3T"/>
                                 <constraint firstItem="gwH-hl-Usb" firstAttribute="leading" secondItem="S4J-l2-sDe" secondAttribute="leading" constant="25" id="clh-3D-0yf"/>
                                 <constraint firstItem="gwH-hl-Usb" firstAttribute="top" secondItem="S4J-l2-sDe" secondAttribute="top" constant="150" id="p8k-qi-rsz"/>
