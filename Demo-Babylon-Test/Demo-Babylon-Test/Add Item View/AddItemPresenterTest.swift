@@ -41,6 +41,7 @@ class AddItemPresenterTest: XCTestCase {
         XCTAssertEqual(view.quantityPlaceholder, "Quantity")
         XCTAssertEqual(view.name, "")
         XCTAssertEqual(view.quantity, "")
+        XCTAssertEqual(view.ocrButtonTitle, "OCR")
     }
     
     func testViewDidLoad_edit() {
@@ -118,6 +119,21 @@ class AddItemPresenterTest: XCTestCase {
         presenterEdit.saveClicked()
         XCTAssertEqual(view.goBackCount, 0)
     }
+    
+    func testOCRClicked() {
+        let view = AddItemViewController(name: "", quantity: "")
+        presenterAdd.attachView(view)
+        
+        firebaseManager.errorReturn = errorMock.error
+        firebaseManager.dataReferenceReturn = DatabaseReference.init()
+        presenterAdd.viewDidLoad()
+        
+        XCTAssertEqual(view.goToOCRCount, 0)
+        
+        presenterAdd.buttonCLicked()
+        
+        XCTAssertEqual(view.goToOCRCount, 1)
+    }
 }
 
 class AddItemViewController: AddItemViewControllerProtocol {
@@ -130,6 +146,8 @@ class AddItemViewController: AddItemViewControllerProtocol {
     var navigationItemCount = 0
     var namePlaceholder: String?
     var quantityPlaceholder: String?
+    var ocrButtonTitle: String?
+    var goToOCRCount = 0
     
     var name: String
     var quantity: String
@@ -139,6 +157,8 @@ class AddItemViewController: AddItemViewControllerProtocol {
         self.quantity = quantity
     }
     
+    func setButtonTitle(title: String) { ocrButtonTitle = title }
+    func goToOCR() { goToOCRCount += 1 }
     func setNameTextfieldText(text: String) { nameText = text }
     func setQuantityTextfield(text: String) { quantityText = text }
     func goBack() { goBackCount += 1 }

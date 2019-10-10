@@ -39,6 +39,12 @@ class OCRViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         startTextDetection()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        session.stopRunning()
+    }
+    
     func startLiveVideo() {
         session.sessionPreset = AVCaptureSession.Preset.photo
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
@@ -85,7 +91,7 @@ class OCRViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
             }
             
             print(candidate.string)
-            //presenter
+            presenter.getInformation(data: candidate.string)
         }
     }
     
@@ -112,6 +118,9 @@ class OCRViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
 extension OCRViewController: OCRViewControllerProtocol {
     func goBack() {
-        navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
 }

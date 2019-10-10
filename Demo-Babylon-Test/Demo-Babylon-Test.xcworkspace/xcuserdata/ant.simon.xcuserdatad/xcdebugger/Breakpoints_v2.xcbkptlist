@@ -7,64 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "51F7248D-AC42-42EA-A071-B469AB05CAC7"
+            uuid = "25FB85A0-FA99-4BAB-8DED-131A1916C650"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Demo-Babylon-Test/Firebase Manager/FireBaseManagerAuthMock.swift"
+            filePath = "Demo-Babylon-Test/Add Item View/AddItemViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "createUser(email:password:completionBlock:)"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "goToOCR()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CC823A22-9373-44DE-AB95-355F48865A20"
+            uuid = "95136400-0F4B-4735-8373-FEBEB2748373"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Demo-Babylon-Test/Firebase Manager/FireBaseManagerAuthMock.swift"
+            filePath = "Demo-Babylon-Test/Add Item View/AddItemPresenterTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "authentication(email:password:completionBlock:)"
-            landmarkType = "7">
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "AddItemViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "03EB9F01-6002-4740-96FE-758C84B5CCD4"
+            uuid = "FDE74CCD-B27B-4D82-B984-B5DA1907714A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Demo-Babylon-Test/Firebase Manager/FireBaseManagerAuthMock.swift"
+            filePath = "Demo-Babylon-Test/Add Item View/AddItemPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "signOut(completionBlock:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7A28F64B-4AA7-404E-BD67-4509072FCB8F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Demo-Babylon-Test/Firebase Manager/FireBaseManagerAuthMock.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "forgottenPassword(email:completionBlock:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "buttonCLicked()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

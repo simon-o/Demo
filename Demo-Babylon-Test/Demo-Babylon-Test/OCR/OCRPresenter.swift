@@ -13,25 +13,41 @@ protocol OCRPresenterDelegate {
 }
 protocol OCRPresenterProtocol: AnyObject {
     func attachView(view: OCRViewControllerProtocol)
-    func getInformtion(data: String)
+    func getInformation(data: String)
 }
 
 class OCRPresenter {
     private weak var view: OCRViewControllerProtocol?
     private let delegate: OCRPresenterDelegate
+    private var array: [String] = []
     
     init(delegate: OCRPresenterDelegate) {
         self.delegate = delegate
     }
+    
+    private func checkValue(data: String) -> Bool{
+        array.append(data)
+        let counts = array.reduce(into: [:]) { counts, word in counts[word, default: 0] += 1 }
+        
+        for (_ , value) in counts {
+            if value > 2 {
+                return true
+            }
+        }
+        return false
+    }
 }
 
 extension OCRPresenter: OCRPresenterProtocol {
-    func getInformtion(data: String) {
-        delegate.fillWith(name: data)
-        view?.goBack()
+    func getInformation(data: String) {
+        if checkValue(data: data) == true {
+            delegate.fillWith(name: data)
+            view?.goBack()
+        }
     }
     
     func attachView(view: OCRViewControllerProtocol) {
         self.view = view
     }
 }
+

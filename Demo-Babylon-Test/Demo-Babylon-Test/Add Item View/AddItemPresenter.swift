@@ -13,6 +13,7 @@ protocol AddItemPresenterProtocol: AnyObject {
     func viewDidLoad()
     func saveClicked()
     func buttonCLicked()
+    func prefill(name: String)
 }
 
 class AddItemPresenter {
@@ -27,6 +28,10 @@ class AddItemPresenter {
 }
 
 extension AddItemPresenter: AddItemPresenterProtocol {
+    func prefill(name: String) {
+        view?.setNameTextfieldText(text: name)
+    }
+    
     func buttonCLicked() {
         view?.goToOCR()
     }
