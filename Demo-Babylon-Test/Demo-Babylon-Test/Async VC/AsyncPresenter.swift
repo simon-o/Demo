@@ -13,52 +13,86 @@ import Dispatch
 protocol AsyncPresenterProtocol {
     func viewDidLoad()
     func viewAttach(view: AsyncViewControllerProtocol)
+    func buttonClicked()
+    func secondButtonClicked()
 }
 
 final class AsyncPresenter {
     private weak var view: AsyncViewControllerProtocol?
     
-    @IBOutlet weak var button: UIButton!
+    
     private func makeGet(completion: @escaping () -> Void) {
-        AF.request("https://httpbin.org/get").response { response in
-            debugPrint(response)
+        AF.request("https://httpbin.org/get", parameters: ["foo":"bar"]).response { _ in
             completion()
         }
     }
     
     private func makePost(completion: @escaping () -> Void) {
-        AF.request("https://httpbin.org/post", method: .post).response { response in
-            debugPrint(response)
+        AF.request("https://httpbin.org/post", method: .post).response { _ in
             completion()
         }
-    }
-    
-    @IBAction func buttonClicked(_ sender: Any) {
-        
     }
 }
 
 extension AsyncPresenter: AsyncPresenterProtocol {
+    func secondButtonClicked() {
+        view?.clearText()
+        let queue = OperationQueue()
+        
+        let op1 = BlockOperation {
+            for _ in 0 ... 10
+            {
+                self.view?.addTextView(text:"1")
+            }
+        }
+        let op2 = BlockOperation {
+            for _ in 0 ... 5
+            {
+                self.view?.addTextView(text:"2")
+            }
+        }
+        let op3 = BlockOperation {
+            for _ in 0 ... 20
+            {
+                self.view?.addTextView(text:"3")
+            }
+            self.view?.addTextView(text:"Done")
+        }
+        
+        queue.maxConcurrentOperationCount = 1
+        op3.addDependency(op1)
+        op3.addDependency(op2)
+        queue.addOperations([op1, op2, op3], waitUntilFinished: true)
+        self.view?.addTextView(text:"all request finished type 2")
+        
+    }
+    
+    func buttonClicked() {
+        view?.clearText()
+        let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
+        makeGet {
+            self.view?.addTextView(text: "get")
+            dispatchGroup.leave()
+        }
+        makePost {
+            self.view?.addTextView(text: "post")
+            dispatchGroup.leave()
+        }
+        dispatchGroup.enter()
+        
+        dispatchGroup.notify(queue: .main) {
+            self.view?.addTextView(text: "all request finished type 1")
+        }
+    }
+    
     func viewAttach(view: AsyncViewControllerProtocol) {
         self.view = view
     }
     
     func viewDidLoad() {
-//        let dispatchGroup = DispatchGroup()
-//        
-//        dispatchGroup.enter()
-//        makeGet {
-//            dispatchGroup.leave()
-//        }
-//        
-//        dispatchGroup.enter()
-//        makePost {
-//            dispatchGroup.leave()
-//        }
-//        
-//        dispatchGroup.wait()
-//        dispatchGroup.notify(queue: .main) {
-//            print("all activities complete")
-//        }
+        view?.setButton(title: "Type 1 Operation")
+        view?.setSecondButton(title: "Type 2 Operation")
     }
 }

@@ -9,7 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AsyncViewController" customModule="Demo_Babylon_Test" customModuleProvider="target">
             <connections>
-                <outlet property="button" destination="Q5a-vL-YM3" id="3H6-Si-JQj"/>
+                <outlet property="button" destination="Q5a-vL-YM3" id="PHw-Je-au0"/>
+                <outlet property="secondButton" destination="FrB-XR-WRY" id="5gh-ge-mEB"/>
+                <outlet property="textView" destination="6yo-s1-eXp" id="Pls-dv-zY8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,27 +20,39 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylm-z1-tNJ">
-                    <rect key="frame" x="10" y="442.5" width="394" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-vL-YM3">
                     <rect key="frame" x="184" y="732" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                     <connections>
-                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="l7l-rh-p1h"/>
+                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="cJQ-Yy-czP"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrB-XR-WRY">
+                    <rect key="frame" x="184" y="694" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="secondButtonClicked:" destination="-1" eventType="touchUpInside" id="hh7-tF-xiR"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6yo-s1-eXp">
+                    <rect key="frame" x="0.0" y="44" width="414" height="600"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Q5a-vL-YM3" secondAttribute="bottom" constant="100" id="31r-Ug-Fjl"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ylm-z1-tNJ" secondAttribute="trailing" constant="10" id="GqJ-vg-1HB"/>
+                <constraint firstItem="Q5a-vL-YM3" firstAttribute="top" secondItem="FrB-XR-WRY" secondAttribute="bottom" constant="8" id="LJZ-Cj-37Z"/>
                 <constraint firstItem="Q5a-vL-YM3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Mer-We-vfK"/>
-                <constraint firstItem="ylm-z1-tNJ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="TvU-q6-OUf"/>
-                <constraint firstItem="ylm-z1-tNJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="tTK-tW-Dau"/>
+                <constraint firstItem="FrB-XR-WRY" firstAttribute="centerX" secondItem="Q5a-vL-YM3" secondAttribute="centerX" id="Nwn-it-bA7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6yo-s1-eXp" secondAttribute="trailing" id="ee3-dd-1Jc"/>
+                <constraint firstItem="6yo-s1-eXp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lUV-OZ-n24"/>
+                <constraint firstItem="FrB-XR-WRY" firstAttribute="top" secondItem="6yo-s1-eXp" secondAttribute="bottom" constant="50" id="wcI-Dj-LfC"/>
+                <constraint firstItem="6yo-s1-eXp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zbY-An-Iu2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="88"/>
