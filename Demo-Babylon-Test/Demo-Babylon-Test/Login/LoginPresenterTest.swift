@@ -31,6 +31,8 @@ class LoginPresenterTest: XCTestCase {
         XCTAssertEqual(view.registerButtonTitle, "Register")
         XCTAssertEqual(view.userNamePlaceholder, "Enter Email")
         XCTAssertEqual(view.passwordPlaceholder, "Enter Password")
+        XCTAssertEqual(view.asyncButtonTitle, "Async Test")
+        
     }
 
     func testAlertView() {
@@ -68,6 +70,15 @@ class LoginPresenterTest: XCTestCase {
         XCTAssertEqual(view.goToListCount, 0)
         XCTAssertEqual(view.alertMessage, "error")
     }
+    
+    func testAsyncClicked() {
+        let view = LoginViewControllerMock(email: "lol@lol.com", password: "123456789")
+        presenter.attachView(view: view)
+        
+        XCTAssertEqual(view.goToAsyncCount, 0)
+        presenter.asyncButtonClicked()
+        XCTAssertEqual(view.goToAsyncCount, 1)
+    }
 }
 
 private class LoginViewControllerMock: LoginViewControllerProtocol {
@@ -80,6 +91,8 @@ private class LoginViewControllerMock: LoginViewControllerProtocol {
     var goToListCount = 0
     var goToRegisterCount = 0
     var goToForgottenCount = 0
+    var goToAsyncCount = 0
+    var asyncButtonTitle: String?
     
     var alertTitle: String?
     var alertMessage: String?
@@ -93,7 +106,8 @@ private class LoginViewControllerMock: LoginViewControllerProtocol {
         self.password = password
     }
     
-    
+    func setAsyncButton(title: String) { asyncButtonTitle = title }
+    func goToAsync() { goToAsyncCount += 1 }
     func setTitle(_ title: String) { self.title = title }
     func setRegisterButtonTitle(_ title: String) { registerButtonTitle = title }
     func setForgottenButtonTitle(_ title: String) { forgottenButtonTitle = title }

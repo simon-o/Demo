@@ -16,6 +16,7 @@
 		2D02CB09234E184C0078BE24 /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CB07234E184C0078BE24 /* OCRViewController.swift */; };
 		2D02CB0A234E184C0078BE24 /* OCRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D02CB08234E184C0078BE24 /* OCRViewController.xib */; };
 		2D02CB0D234E1B650078BE24 /* OCRPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D02CB0C234E1B650078BE24 /* OCRPresenter.swift */; };
+		2D2385D32351E236005CC7DA /* AsyncPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2385D22351E236005CC7DA /* AsyncPresenterTest.swift */; };
 		2D3070BE2345F0850023D8DB /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BD2345F0850023D8DB /* FireBaseManager.swift */; };
 		2D3070C12345FA5F0023D8DB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */; };
 		2D3070C22345FA5F0023D8DB /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */; };
@@ -73,6 +74,7 @@
 		2D02CB07234E184C0078BE24 /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
 		2D02CB08234E184C0078BE24 /* OCRViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OCRViewController.xib; sourceTree = "<group>"; };
 		2D02CB0C234E1B650078BE24 /* OCRPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRPresenter.swift; sourceTree = "<group>"; };
+		2D2385D22351E236005CC7DA /* AsyncPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPresenterTest.swift; sourceTree = "<group>"; };
 		2D3070BD2345F0850023D8DB /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		2D3070BF2345FA5F0023D8DB /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2D3070C02345FA5F0023D8DB /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				2D88BECB2350BDA50067D320 /* AsyncViewController.swift */,
 				2D88BED02350BE190067D320 /* AsyncPresenter.swift */,
 				2D88BECC2350BDA50067D320 /* AsyncViewController.xib */,
+				2D2385D22351E236005CC7DA /* AsyncPresenterTest.swift */,
 			);
 			path = "Async VC";
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				2D02CB04234A44DA0078BE24 /* FireBaseManagerMock.swift in Sources */,
 				D69B21DF23479E12006C2030 /* ForgottenPasswordPresenterTest.swift in Sources */,
 				D6BB0579233FA3F000FA8953 /* Demo_Babylon_TestTests.swift in Sources */,
+				2D2385D32351E236005CC7DA /* AsyncPresenterTest.swift in Sources */,
 				2D02CB06234A88BC0078BE24 /* ListPresenterTest.swift in Sources */,
 				2D9E5EC523469A60003B4E5C /* RegisterPresenterTest.swift in Sources */,
 			);
