@@ -14,6 +14,7 @@ protocol LoginPresenterProtocol: AnyObject {
     func registerClicked()
     func forgottenClicked()
     func viewDidLoad()
+    func asyncButtonClicked()
 }
 
 final class LoginPresenter {
@@ -26,6 +27,10 @@ final class LoginPresenter {
 }
 
 extension LoginPresenter: LoginPresenterProtocol {
+    func asyncButtonClicked() {
+        view?.goToAsync()
+    }
+    
     func viewDidLoad() {
         view?.setTitle("Welcome on my list Demo")
         view?.setLoginButtonTitle("Login")
@@ -33,6 +38,7 @@ extension LoginPresenter: LoginPresenterProtocol {
         view?.setRegisterButtonTitle("Register")
         view?.setUsernamePlaceHolder("Enter Email")
         view?.setPasswordPlaceHolder("Enter Password")
+        view?.setAsyncButton(title: "Async Test")
     }
     
     func attachView(view: LoginViewControllerProtocol) {

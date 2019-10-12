@@ -10,7 +10,8 @@ target 'Demo-Babylon-Test' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
 	pod 'RxSwift'
-	pod 'RxCocoa'
+  pod 'RxCocoa'
+  pod 'Alamofire', '~> 5.0.0-rc.2'
   target 'Demo-Babylon-TestTests' do
     inherit! :search_paths
     # Pods for testing

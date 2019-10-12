@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Demo_Babylon_Test" customModuleProvider="target">
             <connections>
+                <outlet property="asyncButton" destination="pgE-p0-ObO" id="jcv-gJ-Rfn"/>
                 <outlet property="forgottenButton" destination="47j-4f-d6Y" id="YfB-X8-G5W"/>
                 <outlet property="loginButton" destination="mEx-1L-B0P" id="Yyz-qx-PRA"/>
                 <outlet property="passwordTextField" destination="rBw-Lt-uHL" id="SuK-NP-QFm"/>
@@ -73,11 +74,19 @@
                                         <action selector="registerClicked:" destination="-1" eventType="touchUpInside" id="2xH-Fy-qL7"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgE-p0-ObO">
+                                    <rect key="frame" x="184" y="404" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="asyncButtonClicked:" destination="-1" eventType="touchUpInside" id="nrG-YK-TEs"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="2FD-xU-bop" secondAttribute="trailing" constant="25" id="06z-Sy-lC5"/>
                                 <constraint firstItem="mEx-1L-B0P" firstAttribute="centerX" secondItem="rBw-Lt-uHL" secondAttribute="centerX" id="0sp-DC-JsE"/>
+                                <constraint firstItem="pgE-p0-ObO" firstAttribute="top" secondItem="mEx-1L-B0P" secondAttribute="bottom" constant="20" id="1dK-S6-mDr"/>
                                 <constraint firstItem="kRS-WE-aZG" firstAttribute="leading" secondItem="TXK-ki-Uo7" secondAttribute="leading" constant="10" id="8Xi-RE-wlO"/>
                                 <constraint firstItem="rBw-Lt-uHL" firstAttribute="top" secondItem="2FD-xU-bop" secondAttribute="bottom" constant="10" id="LUa-Ua-Iod"/>
                                 <constraint firstAttribute="bottom" secondItem="kem-x6-Elm" secondAttribute="bottom" constant="42" id="M8F-VT-Vni"/>
@@ -86,6 +95,7 @@
                                 <constraint firstItem="mEx-1L-B0P" firstAttribute="top" secondItem="rBw-Lt-uHL" secondAttribute="bottom" constant="40" id="RfS-9g-gba"/>
                                 <constraint firstAttribute="trailing" secondItem="kRS-WE-aZG" secondAttribute="trailing" constant="10" id="aHl-Mo-IFQ"/>
                                 <constraint firstItem="rBw-Lt-uHL" firstAttribute="leading" secondItem="TXK-ki-Uo7" secondAttribute="leading" constant="25" id="d9O-Jn-wtm"/>
+                                <constraint firstItem="pgE-p0-ObO" firstAttribute="centerX" secondItem="mEx-1L-B0P" secondAttribute="centerX" id="gW3-Mq-3PY"/>
                                 <constraint firstAttribute="trailing" secondItem="rBw-Lt-uHL" secondAttribute="trailing" constant="25" id="o7D-8h-9Vs"/>
                                 <constraint firstAttribute="bottom" secondItem="47j-4f-d6Y" secondAttribute="bottom" constant="42" id="oYf-6u-tEL"/>
                                 <constraint firstItem="kRS-WE-aZG" firstAttribute="top" secondItem="TXK-ki-Uo7" secondAttribute="top" constant="200" id="q23-7t-hds"/>

@@ -18,6 +18,8 @@ protocol LoginViewControllerProtocol: BaseViewControllerProtocol {
     func goToList()
     func goToRegister()
     func goToForgotten()
+    func setAsyncButton(title: String)
+    func goToAsync()
     
     func getEmail() -> String?
     func getPassword() -> String?
@@ -34,6 +36,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var forgottenButton: UIButton!
     
     @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet weak var asyncButton: UIButton!
     
     private var presenter: LoginPresenterProtocol
     
@@ -84,9 +87,23 @@ class LoginViewController: UIViewController {
     @IBAction func loginClicked(_ sender: Any) {
         presenter.loginClicked()
     }
+    
+    @IBAction func asyncButtonClicked(_ sender: Any) {
+        presenter.asyncButtonClicked()
+    }
 }
 
 extension LoginViewController: LoginViewControllerProtocol {
+    func goToAsync() {
+        let presenter = AsyncPresenter()
+        let viewController = AsyncViewController(presenter: presenter)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func setAsyncButton(title: String) {
+        asyncButton.setTitle(title, for: .normal)
+    }
+    
     func getEmail() -> String? {
         return usernameTextField.text
     }

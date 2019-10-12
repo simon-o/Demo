@@ -25,6 +25,9 @@
 		2D8107212344F5A900768D23 /* ForgottenPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8107202344F5A900768D23 /* ForgottenPasswordPresenter.swift */; };
 		2D810724234501F200768D23 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D810723234501F200768D23 /* BaseViewController.swift */; };
 		2D88BECA234FB9E90067D320 /* OCRPresentertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BEC9234FB9E90067D320 /* OCRPresentertest.swift */; };
+		2D88BECD2350BDA50067D320 /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BECB2350BDA50067D320 /* AsyncViewController.swift */; };
+		2D88BECE2350BDA50067D320 /* AsyncViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D88BECC2350BDA50067D320 /* AsyncViewController.xib */; };
+		2D88BED12350BE190067D320 /* AsyncPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BED02350BE190067D320 /* AsyncPresenter.swift */; };
 		2D9E5EC123462A10003B4E5C /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E5EC023462A10003B4E5C /* LoginPresenterTest.swift */; };
 		2D9E5EC32346498F003B4E5C /* FireBaseManagerAuthMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E5EC22346498F003B4E5C /* FireBaseManagerAuthMock.swift */; };
 		2D9E5EC523469A60003B4E5C /* RegisterPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E5EC423469A60003B4E5C /* RegisterPresenterTest.swift */; };
@@ -79,6 +82,9 @@
 		2D8107202344F5A900768D23 /* ForgottenPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordPresenter.swift; sourceTree = "<group>"; };
 		2D810723234501F200768D23 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2D88BEC9234FB9E90067D320 /* OCRPresentertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRPresentertest.swift; sourceTree = "<group>"; };
+		2D88BECB2350BDA50067D320 /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncViewController.swift; sourceTree = "<group>"; };
+		2D88BECC2350BDA50067D320 /* AsyncViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AsyncViewController.xib; sourceTree = "<group>"; };
+		2D88BED02350BE190067D320 /* AsyncPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPresenter.swift; sourceTree = "<group>"; };
 		2D9E5EC023462A10003B4E5C /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		2D9E5EC22346498F003B4E5C /* FireBaseManagerAuthMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManagerAuthMock.swift; sourceTree = "<group>"; };
 		2D9E5EC423469A60003B4E5C /* RegisterPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterTest.swift; sourceTree = "<group>"; };
@@ -191,6 +197,16 @@
 			path = "Firebase Manager";
 			sourceTree = "<group>";
 		};
+		2D88BECF2350BDDD0067D320 /* Async VC */ = {
+			isa = PBXGroup;
+			children = (
+				2D88BECB2350BDA50067D320 /* AsyncViewController.swift */,
+				2D88BED02350BE190067D320 /* AsyncPresenter.swift */,
+				2D88BECC2350BDA50067D320 /* AsyncViewController.xib */,
+			);
+			path = "Async VC";
+			sourceTree = "<group>";
+		};
 		585BD8A477F5FF3C2716A993 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +271,7 @@
 				2D8107222345006400768D23 /* Firebase Manager */,
 				2D81071F2344F4DF00768D23 /* Forgotten Password Screen */,
 				D6BB0593233FE6BE00FA8953 /* Register Screen */,
+				2D88BECF2350BDDD0067D320 /* Async VC */,
 				D6BB058C233FD36C00FA8953 /* Login */,
 				D6BB056A233FA3EF00FA8953 /* Assets.xcassets */,
 				D6BB056C233FA3EF00FA8953 /* LaunchScreen.storyboard */,
@@ -393,6 +410,7 @@
 				2D81071E2344F1DA00768D23 /* ForgottenPasswordViewController.xib in Resources */,
 				2D02CB0A234E184C0078BE24 /* OCRViewController.xib in Resources */,
 				D6BB056E233FA3EF00FA8953 /* LaunchScreen.storyboard in Resources */,
+				2D88BECE2350BDA50067D320 /* AsyncViewController.xib in Resources */,
 				2D02CAF92348CBBA0078BE24 /* ListTableViewCell.xib in Resources */,
 				D67E8F382340D83200C11C35 /* GoogleService-Info.plist in Resources */,
 				D6BB056B233FA3EF00FA8953 /* Assets.xcassets in Resources */,
@@ -480,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BB058E233FD3A200FA8953 /* LoginPresenter.swift in Sources */,
+				2D88BED12350BE190067D320 /* AsyncPresenter.swift in Sources */,
 				2D02CAF82348CBBA0078BE24 /* ListTableViewCell.swift in Sources */,
 				D67E8F3D2340E44400C11C35 /* FirebaseManagerAuth.swift in Sources */,
 				2D02CB0D234E1B650078BE24 /* OCRPresenter.swift in Sources */,
@@ -488,6 +507,7 @@
 				D6BB0591233FE6B800FA8953 /* RegisterViewController.swift in Sources */,
 				2D810724234501F200768D23 /* BaseViewController.swift in Sources */,
 				D6BB058A233FA57700FA8953 /* LoginViewController.swift in Sources */,
+				2D88BECD2350BDA50067D320 /* AsyncViewController.swift in Sources */,
 				D6BB0562233FA3EE00FA8953 /* AppDelegate.swift in Sources */,
 				D69B21D9234541CD006C2030 /* ListTableViewController.swift in Sources */,
 				2D02CAFE234A0E470078BE24 /* ListPresenter.swift in Sources */,

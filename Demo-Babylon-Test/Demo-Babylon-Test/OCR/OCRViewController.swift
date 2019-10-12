@@ -14,7 +14,7 @@ protocol OCRViewControllerProtocol: AnyObject {
     func goBack()
 }
 
-class OCRViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+final class OCRViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     @IBOutlet private weak var imageView: UIImageView!
     

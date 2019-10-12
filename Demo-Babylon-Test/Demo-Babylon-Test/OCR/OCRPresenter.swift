@@ -11,12 +11,13 @@ import Foundation
 protocol OCRPresenterDelegate {
     func fillWith(name: String)
 }
+
 protocol OCRPresenterProtocol: AnyObject {
     func attachView(view: OCRViewControllerProtocol)
     func getInformation(data: String)
 }
 
-class OCRPresenter {
+final class OCRPresenter {
     private weak var view: OCRViewControllerProtocol?
     private let delegate: OCRPresenterDelegate
     private var array: [String] = []
