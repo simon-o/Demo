@@ -42,29 +42,32 @@ extension AsyncPresenter: AsyncPresenterProtocol {
         let op1 = BlockOperation {
             for _ in 0 ... 10
             {
+                DispatchQueue.main.async {
                 self.view?.addTextView(text:"1")
+                }
             }
         }
         let op2 = BlockOperation {
             for _ in 0 ... 5
             {
+                DispatchQueue.main.async {
                 self.view?.addTextView(text:"2")
+                }
             }
         }
         let op3 = BlockOperation {
             for _ in 0 ... 20
             {
+                DispatchQueue.main.async {
                 self.view?.addTextView(text:"3")
+                }
             }
-            self.view?.addTextView(text:"Done")
         }
         
         queue.maxConcurrentOperationCount = 1
-        op3.addDependency(op1)
-        op3.addDependency(op2)
-        queue.addOperations([op1, op2, op3], waitUntilFinished: true)
-        self.view?.addTextView(text:"all request finished type 2")
-        
+        op2.addDependency(op1)
+        op2.addDependency(op3)
+        queue.addOperations([op1, op2, op3], waitUntilFinished: false)
     }
     
     func buttonClicked() {
