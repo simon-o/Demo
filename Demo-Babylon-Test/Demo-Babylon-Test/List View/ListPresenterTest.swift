@@ -29,7 +29,7 @@ class ListPresenterTest: XCTestCase {
         presenter.viewDidLoad()
         
         XCTAssertEqual(view.reloadCount, 1)
-        XCTAssertEqual(view.navigationTitle, "List")
+        XCTAssertEqual(view.navigationTitle, "List (1)")
         XCTAssertEqual(view.navigationItemCount, 1)
         XCTAssertEqual(view.goToAddViewCount, 0)
         XCTAssertEqual(view.goToEditViewCount, 0)

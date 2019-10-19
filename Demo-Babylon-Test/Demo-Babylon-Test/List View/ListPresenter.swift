@@ -73,7 +73,6 @@ extension ListPresenter: ListPresenterProtocol {
     func viewDidLoad() {
         listItemRX.asObservable().subscribe(onNext: { (list) in
             self.view?.setNavigationTitle("List (\(list.count))")
-            self.view?.reload()
         }, onError: nil,
            onCompleted: nil,
            onDisposed: nil)
@@ -83,6 +82,7 @@ extension ListPresenter: ListPresenterProtocol {
         
         firebaseManager.getListForUser { (itemsList) in
             self.listItemRX.accept(itemsList)
+            self.view?.reload()
         }
     }
 }
