@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import RxSwift
+import RxRelay
 
 protocol ListPresenterProtocol: AnyObject {
     func viewDidLoad()
@@ -21,11 +23,8 @@ protocol ListPresenterProtocol: AnyObject {
 final class ListPresenter {
     private weak var view: ListTableViewControllerProtocol?
     private var firebaseManager: FirebaseManagerProtocol
-    private var listItems: [ItemList]? {
-        didSet {
-            view?.reload()
-        }
-    }
+    private let listItemRX: BehaviorRelay<[ItemList]> = BehaviorRelay(value: [])
+    private let disposeBag = DisposeBag()
     
     init(fireBase: FirebaseManagerProtocol) {
         self.firebaseManager = fireBase
@@ -38,12 +37,12 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     func getNumberRow(for section: Int) -> Int{
-        return listItems?.count ?? 0
+        return listItemRX.value.count
     }
     
     //TODO: I can use completionBLock to send the action to attriubte to the button from this presenter
     func buildCell(cell: ListTableViewCellProtocol, index: IndexPath) {
-        guard let items = listItems else { return }
+        let items = listItemRX.value
         
         cell.setNameLabel(name: items[index.row].name)
         cell.setQuantityLabel(quantity: items[index.row].quantity)
@@ -72,11 +71,18 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     func viewDidLoad() {
-        view?.setNavigationTitle("List")
+        listItemRX.asObservable().subscribe(onNext: { (list) in
+            self.view?.setNavigationTitle("List (\(list.count))")
+            self.view?.reload()
+        }, onError: nil,
+           onCompleted: nil,
+           onDisposed: nil)
+            .disposed(by: disposeBag)
+        
         view?.setNavigationItem()
         
         firebaseManager.getListForUser { (itemsList) in
-            self.listItems = itemsList
+            self.listItemRX.accept(itemsList)
         }
     }
 }
