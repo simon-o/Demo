@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
+import RxCocoa
 
 protocol ListTableViewControllerProtocol: BaseViewControllerProtocol {
     func reload()
@@ -32,12 +35,11 @@ final class ListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UINib.init(nibName: String(describing: ListTableViewCell.self), bundle: nil), forCellReuseIdentifier: "ListTableViewCell")
             
         presenter.attachView(view: self)
         presenter.viewDidLoad()
-     
     }
 
     // MARK: - Table view data source
