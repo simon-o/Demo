@@ -65,8 +65,9 @@ extension AsyncPresenter: AsyncPresenterProtocol {
         }
         
         queue.maxConcurrentOperationCount = 1
+        op3.addDependency(op1)
+        op3.addDependency(op2)
         op2.addDependency(op1)
-        op2.addDependency(op3)
         queue.addOperations([op1, op2, op3], waitUntilFinished: false)
     }
     
